@@ -1,5 +1,256 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Dan"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Dan"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Hexo"><meta property="og:url" content="http://example.com/"><meta property="og:site_name" content="Hexo"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://example.com/img/og_image.png"><meta property="article:author" content="John Doe"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com"},"headline":"Hexo","image":["http://example.com/img/og_image.png"],"author":{"@type":"Person","name":"John Doe"},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><script data-ad-client="s" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-05-01T04:24:56.817Z" title="2021/5/1 下午12:24:56">2021-05-01</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-05-01T09:15:24.930Z" title="2021/5/1 下午5:15:24">2021-05-01</time></span><span class="level-item">5 minutes read (About 800 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/05/01/still%20javaWeb/"> </a></h1><div class="content"><h4 id="still-javaWeb"><a href="#still-javaWeb" class="headerlink" title="still javaWeb"></a>still javaWeb</h4><h4 id="Maven父子工程的理解"><a href="#Maven父子工程的理解" class="headerlink" title="Maven父子工程的理解"></a>Maven父子工程的理解</h4><ol>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Dan"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Dan"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Hexo"><meta property="og:url" content="http://example.com/"><meta property="og:site_name" content="Hexo"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://example.com/img/og_image.png"><meta property="article:author" content="John Doe"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com"},"headline":"Hexo","image":["http://example.com/img/og_image.png"],"author":{"@type":"Person","name":"John Doe"},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><script data-ad-client="s" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-05-03T14:45:22.910Z" title="2021/5/3 下午10:45:22">2021-05-03</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-05-03T14:45:24.020Z" title="2021/5/3 下午10:45:24">2021-05-03</time></span><span class="level-item">a few seconds read (About 89 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/05/03/In%20Guitar/"> </a></h1><div class="content"><h4 id="In-Guitar"><a href="#In-Guitar" class="headerlink" title="In Guitar"></a>In Guitar</h4><ol>
+<li>六线谱所传递的信息只有一个指板上的指法位置而已，就类似于书法里面填空心字，照着框填颜色，谱面上完全看不出各声部、线条、和声走向，有一部分六线谱甚至没有符杆来规范每个音的时值。</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-05-03T11:06:17.458Z" title="2021/5/3 下午7:06:17">2021-05-03</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-05-03T14:28:12.110Z" title="2021/5/3 下午10:28:12">2021-05-03</time></span><span class="level-item">4 minutes read (About 571 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/05/03/%E5%AD%A6%E8%89%BA/"> </a></h1><div class="content"><h4 id="学艺"><a href="#学艺" class="headerlink" title="学艺"></a>学艺</h4><h4 id="生活中想法"><a href="#生活中想法" class="headerlink" title="生活中想法"></a>生活中想法</h4><ol>
+<li>关于zhihu与Bili<ol>
+<li><strong>成为了我的一种生活方式</strong></li>
+<li>我很想试试用Quora与Youtube解决问题</li>
+<li>zhihu比Bili严肃很多</li>
+<li>我只搜索关键词，看看zhihu有什么相似信息</li>
+</ol>
+</li>
+<li>不是编程，是所有领域深入进去都会影响人的思维方式。不只是影响人的思维方式，是影响一个人的审美观、价值观甚至道德观和世界观。</li>
+<li>“我们使用的工具对我们的思维习惯产生了深远的影响，因此也影响了我们的思维能力。”</li>
+<li><strong>要看熟练地看五线谱！</strong></li>
+<li>那么同时我也看到了THU学生的能力，（通过他们的博客），他们在生活中思考，发现问题，想办法去解决问题</li>
+</ol>
+<h4 id="alsoIT"><a href="#alsoIT" class="headerlink" title="alsoIT"></a>alsoIT</h4><ol>
+<li><p>我们就需要借助一些软件来处理tcp协议，java开发者一般选择tomcat</p>
+</li>
+<li><p>可以先试试Springboot<br>再反学SpringMVC</p>
+</li>
+<li><p>Spring Boot是为了让你快速搭建一个Spring的项目，把Spring的所有Project(也就是题主说的其他)整合在一起。Boot就是启动引导的意思。</p>
+</li>
+<li><p>IDEA不要打开文件夹，而是import项目！</p>
+</li>
+<li><p>SpringWeb</p>
+</li>
+<li><p>Tomcat started on port(s): 8080 (http) with context path ‘’</p>
+</li>
+<li><p>RESTful</p>
+</li>
+<li><p><strong>Java程序员和Python程序员是两种不同的动物，他们以两种完全不同的思维方式进行编码。</strong>，<br>对！！！！，<br>比如Py想的是，我接下来该怎么处理这个变量，一步一步行进<br>而Java想的是这个WholeProgram</p>
+</li>
+<li><p>当然会，不光是程序员，任何职业都会改变从业者的思维方式。</p>
+<p>比如，销售人员处理事情会想着如何搞好人际关系，财务人员会想着如何防治风险，产品经理会……产品经理会想着如何折腾出新花样。</p>
+</li>
+<li><p><strong>让自己也做点需要不同思维方式的事情！</strong></p>
+</li>
+<li><p>笑话：“有次上班时间，不小心水杯撒了，当时顺手就想摁Ctrl+Z，懵了好一会儿才发现这事不能这样搞”</p>
+</li>
+</ol>
+<h4 id="En"><a href="#En" class="headerlink" title="En"></a>En</h4><ol>
+<li>the hard way 来之不易</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-05-03T08:44:43.337Z" title="2021/5/3 下午4:44:43">2021-05-03</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-05-03T11:02:22.312Z" title="2021/5/3 下午7:02:22">2021-05-03</time></span><span class="level-item">7 minutes read (About 1087 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/05/03/%E7%9C%9F%E6%88%91%EF%BC%8C%E4%B8%8D%E6%8B%98%E4%BA%8E%E5%BD%A2/"> </a></h1><div class="content"><h4 id="真我，不拘于形"><a href="#真我，不拘于形" class="headerlink" title="真我，不拘于形"></a>真我，不拘于形</h4><blockquote>
+<p>只要我一个人杀光对面6个，那这里就有11人不用犯杀戒了，善哉善哉</p>
+</blockquote>
+<h4 id="Linux的文件系统，相比Win是否更优秀呢"><a href="#Linux的文件系统，相比Win是否更优秀呢" class="headerlink" title="Linux的文件系统，相比Win是否更优秀呢?"></a>Linux的文件系统，相比Win是否更优秀呢?</h4><ol>
+<li>Linux的文件系统继承了UNIX的思想，就是把同类型的文件放在一起。比如所有的可执行文件放在bin里，配置文件放在etc里</li>
+<li>/usr/bin：一般用户有机会使用到的程序，或者该软件默认就是要让所有用户使用才会放在该目录中；</li>
+<li>/usr/sbin：一些系统有可能会用到的系统命令，与/sbin比起来，都是一些较次要的文件；</li>
+<li>/usr/etc：自行安装或非系统主要的配置文件目录；</li>
+<li>但坏处是不同软件的文件混在一起。安装一个软件，可执行文件会被放进/usr/bin里，而库文件则会被放进/usr/lib里（有些系统还区分lib32/lib64）</li>
+</ol>
+<p>杂言</p>
+<ol>
+<li><p>禅雅塔提出了人与智械并无本质区别，大家都是有灵魂的生物。</p>
+<p>这种观念的产物之一就是源氏，曾经身为人类的他，如今被改造成了机器。那他还是人类吗？老源对于自己的身份认同一直感到痛苦。</p>
+<p>禅雅塔点醒了他。你还是你，无论变成什么，你的灵魂都没有改变。因为真我不拘于形。</p>
+</li>
+</ol>
+<p>IT</p>
+<ol>
+<li>Web服务器映射的URL访问资源？肯定需要写程序处理请求<br>(<a target="_blank" rel="noopener" href="https://s.taobao.com/search?spm=a21bo.21811203.100887-main.28.2e5c11d9B4R1mC&amp;q=%E9%B2%9C%E8%8A%B1&amp;cps=yes&amp;ppath=20566:28896">https://s.taobao.com/search?spm=a21bo.21811203.100887-main.28.2e5c11d9B4R1mC&amp;q=鲜花&amp;cps=yes&amp;ppath=20566%3A28896</a>)<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/api/v4/answers/836566793/concerned_upvoters?limit=10%5Cu0026offset=0">https://www.zhihu.com/api/v4/answers/836566793/concerned_upvoters?limit=10\u0026offset=0</a><br>（就是看看URL）</li>
+<li>bash – Bourne shell<br>batch (分批)</li>
+<li><a target="_blank" rel="noopener" href="http://www.dovov.com/98819.html">表单数据和请求负载有什么区别？</a></li>
+<li>请求都是被封装到前端的，他们已经告诉你该怎么说话了。</li>
+<li>但<strong>处理请求的逻辑</strong>是不同的。没关系，<strong>抽取出来做成Servlet，交给程序员自己编写。</strong></li>
+<li>等Spring家族出现后，Servlet开始退居幕后，取而代之的是方便的SpringMVC。SpringMVC的核心组件DispatcherServlet其实本质就是一个Servlet。但它已经自立门户，<strong>在原来HttpServlet的基础上，又封装了一条逻辑。</strong><br>很多新手程序员框架用久了，甚至觉得SpringMVC就是SpringMVC，和Servlet没半毛钱关系。</li>
+<li>以前，一个main方法启动，程序间的调用井然有序，我们知道程序所有流转过程。</li>
+<li>简单来说就是“注入”和“回调”</li>
+<li>很多时候，框架就像一个傀儡师，我们写的程序是傀儡，顶多就是给傀儡化化妆、打扮打扮，实际的运作全是傀儡师搞的。</li>
+<li>既不需要我写TCP连接数据库，也不需要我解析HTTP请求，更不需要我把结果转成HTTP响应，request对象和response对象帮我搞定了。</li>
+<li>至于Response，Tomcat传给Servlet时，它还是空的对象。Servlet逻辑处理后得到结果，最终通过response.write()方法，将结果写入response内部的缓冲区。Tomcat会在servlet处理结束后，拿到response，遍历里面的信息，组装成HTTP响应发给客户端。</li>
+<li>默认doXXX （doGet） 直接报错，很粗暴</li>
+<li>父类把能写的逻辑都写完，把不确定的业务代码抽成一个方法，调用它。当子类重写该方法，整个业务代码就活了。这就是模板方法模式</li>
+</ol>
+<p>ITmore</p>
+<ol>
+<li><p>decompiled .class file, byte version:49.0</p>
+</li>
+<li><p>File is read-only</p>
+</li>
+<li><p>Exception</p>
+</li>
+<li><p>IDEA</p>
+<ol>
+<li>call hierarchy ctrl alt h</li>
+<li>显示structure Alt+7</li>
+</ol>
+</li>
+<li><p>deprecated – 不建议使用</p>
+</li>
+<li><p>getRequestDispatcher 转发 dispatcher</p>
+<ol>
+<li>dispatch 派遣</li>
+</ol>
+</li>
+<li><p>Python 有很多现成的 Web 开发框架，几行代码就能生成一个功能齐全的 Web 服务。</p>
+<p>比较著名的就是 Django 和 Flask。<br><strong>我有想法！</strong></p>
+</li>
+<li><p>“编程语言” 与 “脚本语言”</p>
+</li>
+<li><p>kubernetes  –  容器编排工具k8s</p>
+</li>
+</ol>
+<p>En</p>
+<ol>
+<li><p>Dispatcher</p>
+</li>
+<li><p>我可以不可以把知乎编程Quora把Bili变成Youtube</p>
+</li>
+<li><p>classic  n&amp;adj<br>classical adj</p>
+</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-05-03T05:15:32.187Z" title="2021/5/3 下午1:15:32">2021-05-03</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-05-03T17:01:55.384Z" title="2021/5/4 上午1:01:55">2021-05-04</time></span><span class="level-item">a minute read (About 205 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/05/03/Recent%20Topics/"> </a></h1><div class="content"><h4 id="Recent-Topics"><a href="#Recent-Topics" class="headerlink" title="Recent Topics"></a>Recent Topics</h4><blockquote>
+<p>我想说也许假期马上就要完了，但是我还是一样——对生活要有热情MaxNBD！<br>我有好多想要做的事情——那么我可以每天计划好时间——完成很多我想要做的事情！<br>我想要、我有能力、我可以</p>
+<p>此为坐标，在接下来的生活里要加油要加油！</p>
+</blockquote>
+<ol>
+<li>生活<ol>
+<li>兴趣<ol>
+<li>Guitar<ol>
+<li>练习</li>
+<li>乐理</li>
+<li>录制</li>
+</ol>
+</li>
+<li>看书</li>
+</ol>
+</li>
+<li>Routine</li>
+<li>运动</li>
+</ol>
+</li>
+<li>学习<ol>
+<li>科目<ol>
+<li>测量学</li>
+<li>物理化学</li>
+</ol>
+</li>
+<li>IT<ol>
+<li>DS</li>
+<li>Servlet？</li>
+<li>getMore</li>
+</ol>
+</li>
+<li>成为一个 更完整的人</li>
+</ol>
+</li>
+<li>Emo<ol>
+<li>不要想太多，而是先做</li>
+<li>其实在这个状态下的我很懒…</li>
+<li>要改变</li>
+<li>很重要的一点是——<strong>不要一直自我怀疑</strong></li>
+<li>有什么技能点提升自己</li>
+</ol>
+</li>
+</ol>
+<p>PS：提高效率！</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-05-03T03:36:48.097Z" title="2021/5/3 上午11:36:48">2021-05-03</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-05-03T03:41:30.989Z" title="2021/5/3 上午11:41:30">2021-05-03</time></span><span class="level-item">14 minutes read (About 2155 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/05/03/%E4%B8%80%E6%8A%80%E4%B9%8B%E9%95%BF%EF%BC%9F/"> </a></h1><div class="content"><h4 id="一技之长？"><a href="#一技之长？" class="headerlink" title="一技之长？"></a>一技之长？</h4><ol>
+<li>爬格子，左手的准备</li>
+<li>脏音 – 打品</li>
+<li>一定要避免一开始手臂没有夹紧，弹到左手小指按弦的时候，发现手够不到了</li>
+<li>一旦有酸痛或者任何身体上的不适，立刻停止，查找原因，这绝对是姿态上发生了一些隐藏错误导致的。</li>
+</ol>
+<h4 id="From知乎"><a href="#From知乎" class="headerlink" title="From知乎"></a>From知乎</h4><p><strong>第一种：手中无剑，心中无剑</strong></p>
+<p>他们可能是是刚刚拿起吉他的初学者。他们大多谦逊、认真而努力。这部分人很容易分辨——他们承认自己刚开始学起，而且喜欢吉他，正在为此努力。</p>
+<p>还有那么一种人总是喜欢在所谓文艺圈、摇滚圈里踩上一脚，你总是能在各种类似场合看到他。而他几乎什么都不会，他只是在不停地说——说他最近听某某某摇滚乐队，说他认识什么什么人，用一些不着边际的论点评价某某乐手、某款吉他，说他最近在弹什么什么曲子…等等等等。可他连F和弦都按不响。</p>
+<p><strong>第二种：手中有剑，心中无剑</strong></p>
+<p>这部分人可以弹上几小段儿了～可能是几个和弦的进行走向，可能是半段天空之城，可能是爱的罗曼史前几句，也可能是come as you are的前奏riff，或者踩下失真弹个真的爱你的前奏…等等等等～</p>
+<p>他们虽然分解 扫弦都能应付，换和弦 节拍也没啥大毛病，但是还是可以看出一些生涩——并不是游刃有余，挥洒自如那种。</p>
+<p>他甚至能从网上随便找张弹唱谱就唱一段儿了，可他不知道这谱子的和声是错的。</p>
+<p><strong>第三种：手中有剑，心中有剑</strong></p>
+<p>这部分人就可以说是学成了～ 手上的技术该有的有，但也略带一些毛糙和轻狂。</p>
+<p>他们大多已经分出了不同的流派。</p>
+<p>玩弹唱的知道了怎么用首调转调，知道了怎么弹shuffle、swing、bossa nova、walking bass，和声进行也丰富了，#4半减、降6 降7、属7 大7…听上去很棒了，弹唱、切分挥洒自如，而且他们的注意力居然完全不在吉他上，有时看看天花板，看看麦克风，或者干脆闭上眼睛～ 他们人人都会弹tears in heaven。</p>
+<p>玩摇滚的编的riff一个比一个酷～点弦、推弦、扫拨琶音、泛音、摇把、哇音踏板…玩的不亦乐乎～ 他们也建立了正确的器材观和音色观，知道了boost是怎么回事，前级是怎么回事…等等。他们可能不愿意静下心来学乐理，可是玩摇滚知道至少会知道五声音阶、同名关系大小调、和声小调等等之类的。他们崇拜Eric Johnson，可是拿起琴来弹得却是slash和metallic。</p>
+<p>玩流行音乐的可能已经半职业化了，他们在某个小酒吧里弹吉他。它们弹得大多是“手中有剑，心中无剑”时期的流行歌曲，但谱子已经不是从网上找的了。他们满脑子的首调理论让他们更容易扒出每首歌的和声进行并且时刻转调。他们能凭借丰富的经验听出每首歌的break到底是怎么切分的。他们使用合成效果器，不用金属吉他，有厚厚的歌本和老长的过线。一首歌他们弹得可能不多、不难，但该有的绝对有，原版的小填充、solo等等——稳定而准确。 越老的歌弹得越准，因为那些打小费的老头子都爱听这个~</p>
+<p>玩指弹的也积累了几首熟曲了~ 每次拿起琴来都会驾轻就熟的来上一段儿，当然也留了不少没练完的残棋。那些指法也都形成了肌肉记忆，想错都难。点弦、打板、各种泛音都能来一段~ 由于指弹演奏的独立、花哨、高端，听觉和观赏性俱佳，往往已经被大家看做大师了~ 自己也沾沾自喜起来。有时想过原创一段儿，却发现自己花了大把时间死磕大曲子和手头技术，乐理反而成了短板。</p>
+<p><strong>第四种：手中无剑，心中有剑</strong></p>
+<p>他可能不常在人面前弹吉他，可能有自己与音乐有关的其他事业，没准家里的好几把吉他弦都松掉了，只留一把在手边没事拿来玩玩——但他不放弃学习。 在人面前呢，也不会正襟危坐的给你好好弹一段，可能只会懒散的扒拉几个你没见过的和弦，或者随意的弹几句你没听过的什么东西。</p>
+<p>可你千万别以为他什么也不会——他就是不乐意给你弹——那些赞许、崇拜、请教，他都听腻了。 他在等棋逢对手或是真的是能聊到一个层次的人出现，然后假装云淡风轻的聊两句之后终于露出犀利的一面~</p>
+<p>他们的播放器里会装着blues、rock，但那是他们怀旧用的。jazz、fusion、funk才能让他们精神起来。他们抱怨花了几年时间找着调却又要离调演奏，练了很久的琶音、速弹很久都用不上，还抱怨之前用了好多年的某些理论现在都是错的，或是有疑惑的。有时他们会思考251——<a href="tel:2514736">2514736</a>，3代1，下行，如何衍生。。。音乐的发展趋势怎样变化了。。不过大多数时候他们想的、聊的，和音乐没有一点关系。</p>
+<p><strong>第五种：不杀</strong></p>
+<p>他们人剑合一了。。。如果说上一种人已经算是隐于市的武林高手，那么这种人已经没有杀气了——他们不需要杀气来捍卫自己的地位和能力，他们在那就够了。如果说上一个层次是弹琴的年头熬出来的，这个层次只能是生活的阅历和极其丰富的知识熬出来的了。圈子里提到他几乎没人不知道，大家都很尊敬他。他恐怕年岁不小，也很少有人和他合作过一起演出。但合作过的人都会说，他弹得真牛b——但你也不知道究竟有多牛b——这里面的知识和细节可能已经不在你的理解范围以内了。</p>
+<p>而第一种弹不响F和弦的那个人说：“我昨天刚和他一起吃过饭。”</p>
+<h4 id="OneMore"><a href="#OneMore" class="headerlink" title="OneMore"></a>OneMore</h4><p>看学琴一段时间的人的吉他水平就看能不能自然的用右手控制音色变化。因为这时已经能弹一些曲子了，基本的技巧和手指灵活性这些不再是判断标准，此时能驾驭好吉他的声音就是上道的，这是注意力从技巧回到音乐本身的开始。</p>
+<p>看弹琴很久的人的吉他水平就看他能不能用吉他表现出自己的感性和理性。练琴刻苦的话，做EC，</p>
+<p>做SRV，做EVH都不难，难在弹出他们的水平和味道之后还能找到你自己。</p>
+<h4 id="ONEMORE"><a href="#ONEMORE" class="headerlink" title="ONEMORE"></a>ONEMORE</h4><p>当然这东西新手是感觉不到这种差别的。<br>但是琴如其人。<br>弹的越好都越谦虚，因为都明白了这条路多深。<br>弹几十年都不见底。心境都非常淡然。<br>反而张牙舞爪给瞎比划的，一般都是一瓶子不满半瓶子晃荡。<br>这种人太多了。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-05-02T04:48:01.236Z" title="2021/5/2 下午12:48:01">2021-05-02</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-05-02T04:48:01.341Z" title="2021/5/2 下午12:48:01">2021-05-02</time></span><span class="level-item">a minute read (About 122 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/05/02/x%20import%20org/"> </a></h1><div class="content"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">import org.junit.Test;</span><br><span class="line"></span><br><span class="line">import java.util.HashMap;</span><br><span class="line">import java.util.LinkedList;</span><br><span class="line"></span><br><span class="line">public class testAlo_2 &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void test_06()&#123;</span><br><span class="line">        System.out.println(&quot;the test moves on&quot;);</span><br><span class="line">&#x2F;&#x2F;        LinkedList&lt;Integer&gt; corsList &#x3D; toLinkedList(&quot;[0, 164, 124, 1, 124, 177, 2, 80, 102, 3, 162, 164, 4, 214, 155, 5, 208, 68, 6, 64, 183]&quot;);</span><br><span class="line">        LinkedList&lt;Integer&gt; corsList &#x3D; toLinkedList(&quot;[0, 164, 124, 1, 124, 177]&quot;);</span><br><span class="line">&#x2F;&#x2F;        getPoint(corsList);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static LinkedList&lt;Integer&gt; toLinkedList(String str)&#123;</span><br><span class="line">        str &#x3D; str.concat(&quot;,&quot;);</span><br><span class="line">        LinkedList&lt;Integer&gt; corList &#x3D; new LinkedList&lt;Integer&gt;();</span><br><span class="line"></span><br><span class="line">        HashMap&lt;Integer, LinkedList&lt;Integer&gt;&gt; Sites &#x3D; new HashMap&lt;Integer, LinkedList&lt;Integer&gt;&gt;();</span><br><span class="line"></span><br><span class="line">        int asciOfChar;</span><br><span class="line">        String tempString &#x3D; new String();</span><br><span class="line"></span><br><span class="line">        for(int i &#x3D; 0; i&lt;str.length(); i++)&#123;</span><br><span class="line">            asciOfChar&#x3D;Integer.valueOf(str.charAt(i));</span><br><span class="line"></span><br><span class="line">            if(46&lt;asciOfChar &amp; asciOfChar&lt;58)&#123;  &#x2F;&#x2F;修改tempString</span><br><span class="line">                String a &#x3D; String.valueOf(str.charAt(i));  &#x2F;&#x2F;返回i处的String</span><br><span class="line">                tempString &#x3D; tempString.concat(a);  &#x2F;&#x2F;返回 string2 连接 string1 的新字符串</span><br><span class="line">            &#125;</span><br><span class="line">            if(asciOfChar &#x3D;&#x3D; 44)&#123;  &#x2F;&#x2F;add num to linkedList</span><br><span class="line">                corList.add(Integer.parseInt(tempString));</span><br><span class="line">                tempString &#x3D; &quot;&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(corList);</span><br><span class="line">        return corList;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-05-01T12:48:37.878Z" title="2021/5/1 下午8:48:37">2021-05-01</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-05-01T17:03:55.221Z" title="2021/5/2 上午1:03:55">2021-05-02</time></span><span class="level-item">a minute read (About 131 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/05/01/%E8%AF%B7%E6%95%99%E4%B8%80%E4%B8%8B%EF%BC%9A%EF%BC%88in%E6%8A%80%E6%9C%AF%E7%AB%99%EF%BC%89/"> </a></h1><div class="content"><p>请教一下：（in技术站）<br>写了一个小的webapp，使用html中Ajax向Tomcat中Servlet发请求然后Servlet执行一些代码，再返回给浏览器，js更新html内容<br>==&gt; 这样是不是很鸡肋，大家一般都用什么技术栈呢？<br>（我觉得java springboot springmvc 那一套又大又难）</p>
+<ol>
+<li>dpringboot不难吧</li>
+<li>Ajax 不允许跨域请求</li>
+<li>Ajax请求Servlet时无需指定returnType，因为指定也没用…</li>
+</ol>
+<p>jsonObj.dot1=[12,13]</p>
+<p>jsonObj. newParam =’pre’;</p>
+<p>var jsonObj={</p>
+<p>‘param1’:22,</p>
+<p>‘param2’ :33</p>
+<p>};</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-05-01T09:07:12.727Z" title="2021/5/1 下午5:07:12">2021-05-01</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-05-01T12:40:55.665Z" title="2021/5/1 下午8:40:55">2021-05-01</time></span><span class="level-item">a minute read (About 210 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/05/01/JavaSiyu/"> </a></h1><div class="content"><h4 id="JavaSiyu"><a href="#JavaSiyu" class="headerlink" title="JavaSiyu"></a>JavaSiyu</h4><h4 id="javaBean（实体类）"><a href="#javaBean（实体类）" class="headerlink" title="javaBean（实体类）"></a>javaBean（实体类）</h4><ol>
+<li>要有无参构造</li>
+<li>属性私有化</li>
+<li>要有get、set方法</li>
+<li>OEMRM：对象关系映射</li>
+</ol>
+<h4 id="MVC三层架构"><a href="#MVC三层架构" class="headerlink" title="MVC三层架构"></a>MVC三层架构</h4><ol>
+<li>(在微服务之前)</li>
+<li>MVC—— Model View Conroller<ol>
+<li>Model<ol>
+<li>业务逻辑 service</li>
+<li>数据持久 CRUD Dao</li>
+</ol>
+</li>
+<li>View<ol>
+<li>展示数据</li>
+<li>提供链接，发起Servler请求 a form img</li>
+</ol>
+</li>
+<li>Controller<ol>
+<li>接受用户请求 req Servlet （patra Session）</li>
+<li>交给业务层处理相应代码</li>
+<li>控制试图跳转<ol>
+<li>获取用户请求（参数、user、pswd）<br>交给业务判断用户名密码是否正确  ==&gt; Dao</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="Fliter"><a href="#Fliter" class="headerlink" title="Fliter"></a>Fliter</h4><ol>
+<li>fliter 过滤数据<ol>
+<li>处理中文乱码</li>
+<li>登录验证</li>
+</ol>
+</li>
+<li>在web容器 与 webapp 之间</li>
+<li>与Servlet一样，实现Fliter接口</li>
+</ol>
+<h4 id="JavaSpring"><a href="#JavaSpring" class="headerlink" title="JavaSpring"></a>JavaSpring</h4><ol>
+<li>Bean的自动装配<br>在容器中自动查找Beanid</li>
+<li>注解实现自动装配</li>
+</ol>
+<h4 id="AOP代理模式"><a href="#AOP代理模式" class="headerlink" title="AOP代理模式"></a>AOP代理模式</h4><ol>
+<li></li>
+</ol>
+<p>junit<br>mybatis<br>mysql<br>spring<br>aop<br>mybatis-spring</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-05-01T04:24:56.817Z" title="2021/5/1 下午12:24:56">2021-05-01</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-05-01T09:15:24.930Z" title="2021/5/1 下午5:15:24">2021-05-01</time></span><span class="level-item">5 minutes read (About 800 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/05/01/still%20javaWeb/"> </a></h1><div class="content"><h4 id="still-javaWeb"><a href="#still-javaWeb" class="headerlink" title="still javaWeb"></a>still javaWeb</h4><h4 id="Maven父子工程的理解"><a href="#Maven父子工程的理解" class="headerlink" title="Maven父子工程的理解"></a>Maven父子工程的理解</h4><ol>
 <li>夫项目pron.xml ==&gt; <moulle></li>
 <li>child Proj  ==&gt;  <parent><br>can use the .jar of patenr</li>
 <li>WEB-INF是Java的WEB应用的安全目录。所谓安全就是客户端无法访问，只有服务端可以访问的目录。</li>
@@ -95,489 +346,7 @@ xmlhttp.send();
 </code></pre>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. Ajax &#x3D;&#x3D;&gt; http Req &#x3D;&#x3D;&gt; php Interface &#x3D;&#x3D;&gt; httpResponse &#x3D;&#x3D;&gt; Js change Dom</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1. docker 文件映射 </span><br><span class="line">   使用&#96;docker run -v&#96;指令，例如我需要将本地的的&#96;&#x2F;root&#x2F;code&#96;路径映射到容器内的&#96;&#x2F;data&#x2F;code&#96;路径</span><br><span class="line">2. &#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html</span><br><span class="line">3. docker run --name &quot;ngx_for_php&quot; -d -v &#x2F;root&#x2F;work&#x2F;php:&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html -p 3001:80 62</span><br><span class="line">4. nginx.conf配置文件在 &#x2F;etc&#x2F;nginx&#x2F; </span><br><span class="line">   &#x2F;etc&#x2F;nginx&#x2F;conf.d&#x2F;</span><br><span class="line">5. nginx 不允许静态Post。。。</span><br><span class="line"></span><br><span class="line">2. docker run --name &quot;tpPlatForm&quot; -d -p 3001:80 -v &#x2F;root&#x2F;workphp:&#x2F;app&#x2F; minapp-weixin:v0.0.1</span><br><span class="line"></span><br><span class="line">3. html 可以内嵌php</span><br><span class="line"></span><br><span class="line">   &#96;&#96;&#96;html</span><br><span class="line">   &lt;!DOCTYPE HTML&gt; </span><br><span class="line">   &lt;html&gt;</span><br><span class="line">   &lt;head&gt;</span><br><span class="line">   &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">   &lt;title&gt;菜鸟教程(runoob.com)&lt;&#x2F;title&gt;</span><br><span class="line">   &lt;style&gt;</span><br><span class="line">   .error &#123;color: #FF0000;&#125;</span><br><span class="line">   &lt;&#x2F;style&gt;</span><br><span class="line">   &lt;&#x2F;head&gt;</span><br><span class="line">   &lt;body&gt; </span><br><span class="line">   </span><br><span class="line">   &lt;?php</span><br><span class="line">   &#x2F;&#x2F; 定义变量并默认设置为空值</span><br><span class="line">   $nameErr &#x3D; $emailErr &#x3D; $genderErr &#x3D; $websiteErr &#x3D; &quot;&quot;;</span><br><span class="line">   $name &#x3D; $email &#x3D; $gender &#x3D; $comment &#x3D; $website &#x3D; &quot;&quot;;</span><br><span class="line">   </span><br><span class="line">   if ($_SERVER[&quot;REQUEST_METHOD&quot;] &#x3D;&#x3D; &quot;POST&quot;)</span><br><span class="line">   &#123;</span><br><span class="line">       if (empty($_POST[&quot;name&quot;]))</span><br><span class="line">       &#123;</span><br><span class="line">           $nameErr &#x3D; &quot;名字是必需的&quot;;</span><br><span class="line">       &#125;</span><br><span class="line">       else</span><br><span class="line">       &#123;</span><br><span class="line">           $name &#x3D; test_input($_POST[&quot;name&quot;]);</span><br><span class="line">           &#x2F;&#x2F; 检测名字是否只包含字母跟空格</span><br><span class="line">           if (!preg_match(&quot;&#x2F;^[a-zA-Z ]*$&#x2F;&quot;,$name))</span><br><span class="line">           &#123;</span><br><span class="line">               $nameErr &#x3D; &quot;只允许字母和空格&quot;; </span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       </span><br><span class="line">       if (empty($_POST[&quot;email&quot;]))</span><br><span class="line">       &#123;</span><br><span class="line">         $emailErr &#x3D; &quot;邮箱是必需的&quot;;</span><br><span class="line">       &#125;</span><br><span class="line">       else</span><br><span class="line">       &#123;</span><br><span class="line">           $email &#x3D; test_input($_POST[&quot;email&quot;]);</span><br><span class="line">           &#x2F;&#x2F; 检测邮箱是否合法</span><br><span class="line">           if (!preg_match(&quot;&#x2F;([\w\-]+\@[\w\-]+\.[\w\-]+)&#x2F;&quot;,$email))</span><br><span class="line">           &#123;</span><br><span class="line">               $emailErr &#x3D; &quot;非法邮箱格式&quot;; </span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       </span><br><span class="line">       if (empty($_POST[&quot;website&quot;]))</span><br><span class="line">       &#123;</span><br><span class="line">           $website &#x3D; &quot;&quot;;</span><br><span class="line">       &#125;</span><br><span class="line">       else</span><br><span class="line">       &#123;</span><br><span class="line">           $website &#x3D; test_input($_POST[&quot;website&quot;]);</span><br><span class="line">           &#x2F;&#x2F; 检测 URL 地址是否合法</span><br><span class="line">           if (!preg_match(&quot;&#x2F;\b(?:(?:https?|ftp):\&#x2F;\&#x2F;|www\.)[-a-z0-9+&amp;@#\&#x2F;%?&#x3D;~_|!:,.;]*[-a-z0-9+&amp;@#\&#x2F;%&#x3D;~_|]&#x2F;i&quot;,$website))</span><br><span class="line">           &#123;</span><br><span class="line">               $websiteErr &#x3D; &quot;非法的 URL 的地址&quot;; </span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       </span><br><span class="line">       if (empty($_POST[&quot;comment&quot;]))</span><br><span class="line">       &#123;</span><br><span class="line">           $comment &#x3D; &quot;&quot;;</span><br><span class="line">       &#125;</span><br><span class="line">       else</span><br><span class="line">       &#123;</span><br><span class="line">           $comment &#x3D; test_input($_POST[&quot;comment&quot;]);</span><br><span class="line">       &#125;</span><br><span class="line">       </span><br><span class="line">       if (empty($_POST[&quot;gender&quot;]))</span><br><span class="line">       &#123;</span><br><span class="line">           $genderErr &#x3D; &quot;性别是必需的&quot;;</span><br><span class="line">       &#125;</span><br><span class="line">       else</span><br><span class="line">       &#123;</span><br><span class="line">           $gender &#x3D; test_input($_POST[&quot;gender&quot;]);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   function test_input($data)</span><br><span class="line">   &#123;</span><br><span class="line">       $data &#x3D; trim($data);</span><br><span class="line">       $data &#x3D; stripslashes($data);</span><br><span class="line">       $data &#x3D; htmlspecialchars($data);</span><br><span class="line">       return $data;</span><br><span class="line">   &#125;</span><br><span class="line">   ?&gt;</span><br><span class="line">   </span><br><span class="line">   &lt;h2&gt;PHP 表单验证实例&lt;&#x2F;h2&gt;</span><br><span class="line">   &lt;p&gt;&lt;span class&#x3D;&quot;error&quot;&gt;* 必需字段。&lt;&#x2F;span&gt;&lt;&#x2F;p&gt;</span><br><span class="line">   &lt;form method&#x3D;&quot;post&quot; action&#x3D;&quot;&lt;?php echo htmlspecialchars($_SERVER[&quot;PHP_SELF&quot;]);?&gt;&quot;&gt; </span><br><span class="line">      名字: &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;name&quot; value&#x3D;&quot;&lt;?php echo $name;?&gt;&quot;&gt;</span><br><span class="line">      &lt;span class&#x3D;&quot;error&quot;&gt;* &lt;?php echo $nameErr;?&gt;&lt;&#x2F;span&gt;</span><br><span class="line">      &lt;br&gt;&lt;br&gt;</span><br><span class="line">      E-mail: &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;email&quot; value&#x3D;&quot;&lt;?php echo $email;?&gt;&quot;&gt;</span><br><span class="line">      &lt;span class&#x3D;&quot;error&quot;&gt;* &lt;?php echo $emailErr;?&gt;&lt;&#x2F;span&gt;</span><br><span class="line">      &lt;br&gt;&lt;br&gt;</span><br><span class="line">      网址: &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;website&quot; value&#x3D;&quot;&lt;?php echo $website;?&gt;&quot;&gt;</span><br><span class="line">      &lt;span class&#x3D;&quot;error&quot;&gt;&lt;?php echo $websiteErr;?&gt;&lt;&#x2F;span&gt;</span><br><span class="line">      &lt;br&gt;&lt;br&gt;</span><br><span class="line">      备注: &lt;textarea name&#x3D;&quot;comment&quot; rows&#x3D;&quot;5&quot; cols&#x3D;&quot;40&quot;&gt;&lt;?php echo $comment;?&gt;&lt;&#x2F;textarea&gt;</span><br><span class="line">      &lt;br&gt;&lt;br&gt;</span><br><span class="line">      性别:</span><br><span class="line">      &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;gender&quot; &lt;?php if (isset($gender) &amp;&amp; $gender&#x3D;&#x3D;&quot;female&quot;) echo &quot;checked&quot;;?&gt;  value&#x3D;&quot;female&quot;&gt;女</span><br><span class="line">      &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;gender&quot; &lt;?php if (isset($gender) &amp;&amp; $gender&#x3D;&#x3D;&quot;male&quot;) echo &quot;checked&quot;;?&gt;  value&#x3D;&quot;male&quot;&gt;男</span><br><span class="line">      &lt;span class&#x3D;&quot;error&quot;&gt;* &lt;?php echo $genderErr;?&gt;&lt;&#x2F;span&gt;</span><br><span class="line">      &lt;br&gt;&lt;br&gt;</span><br><span class="line">      &lt;input type&#x3D;&quot;submit&quot; name&#x3D;&quot;submit&quot; value&#x3D;&quot;Submit&quot;&gt; </span><br><span class="line">   &lt;&#x2F;form&gt;</span><br><span class="line">   </span><br><span class="line">   &lt;?php</span><br><span class="line">   echo &quot;&lt;h2&gt;您输入的内容是:&lt;&#x2F;h2&gt;&quot;;</span><br><span class="line">   echo $name;</span><br><span class="line">   echo &quot;&lt;br&gt;&quot;;</span><br><span class="line">   echo $email;</span><br><span class="line">   echo &quot;&lt;br&gt;&quot;;</span><br><span class="line">   echo $website;</span><br><span class="line">   echo &quot;&lt;br&gt;&quot;;</span><br><span class="line">   echo $comment;</span><br><span class="line">   echo &quot;&lt;br&gt;&quot;;</span><br><span class="line">   echo $gender;</span><br><span class="line">   ?&gt;</span><br><span class="line">   </span><br><span class="line">   &lt;&#x2F;body&gt;</span><br><span class="line">   &lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure></li>
 </ol>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-04-30T15:20:49.920Z" title="2021/4/30 下午11:20:49">2021-04-30</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-04-30T17:15:54.418Z" title="2021/5/1 上午1:15:54">2021-05-01</time></span><span class="level-item">3 minutes read (About 490 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/04/30/thinkPHP/"> </a></h1><div class="content"><h4 id="thinkPHP"><a href="#thinkPHP" class="headerlink" title="thinkPHP"></a>thinkPHP</h4><ol>
-<li><p>官方文档<br>kancloud.cn/manual/thinkphp6_0</p>
-</li>
-<li><p>```bash<br>apt-get update<br>apt-get install curl<br>sudo apt-get install php<br>curl -sS <a target="_blank" rel="noopener" href="https://getcomposer.org/installer">https://getcomposer.org/installer</a> | php<br>mv composer.phar /usr/local/bin/composer</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. 简单来说，安装php太复杂</span><br><span class="line"></span><br><span class="line">   1. 安装php</span><br><span class="line">   2. 安装composer</span><br><span class="line"></span><br><span class="line">4. &#96;&#96;&#96;bash</span><br><span class="line">   #创建模板</span><br><span class="line">   composer create-project topthink&#x2F;think tp</span><br></pre></td></tr></table></figure>
-
-<p>会创建 tp 文件夹，中有工程文件结构</p>
-<p>默认访问 public.index.php</p>
-</li>
-<li><p>```bash<br>/root/workspace/tp<br>/var/www;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">6. nginx.conf配置文件在 &#x2F;etc&#x2F;nginx&#x2F; </span><br><span class="line">   &#x2F;etc&#x2F;nginx&#x2F;conf.d&#x2F;</span><br><span class="line"></span><br><span class="line">7. &gt; **nginx不支持thinkphp的原因**</span><br><span class="line">   &gt;</span><br><span class="line">   &gt; ThinkPHP支持通过PATHINFO和URL rewrite的方式来提供友好的URL，只需要在配置文件中设置 &#39;URL_MODEL&#39; &#x3D;&gt; 2 即可。在Apache下只需要开启mod_rewrite模块就可以正常访问了，但是Nginx中默认是不支持PATHINFO的，所以nginx默认情况下是不支持thinkphp的。不过我们可以通过修改nginx的配置文件来让其支持thinkphp。</span><br><span class="line">   &gt;</span><br><span class="line">   &gt; **让nginx支持pathinfo，支持thinkphp**</span><br><span class="line">   &gt;</span><br><span class="line">   &gt; 我们打开nginx的配置文件，如果是想某个站点支持，请打开对应站点的配置文件</span><br><span class="line"></span><br><span class="line">8. docker build -t pdophp .&#x2F;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tips：</span><br><span class="line"></span><br><span class="line">1. composer</span><br><span class="line"></span><br><span class="line">2. &#96;&#96;&#96;bash</span><br><span class="line">   #php需求组件</span><br><span class="line">   apt-get install php-mbstring</span><br></pre></td></tr></table></figure></li>
-<li><p>ss命令 – 显示活动套接字信息<br>是Socket Statistics的缩写<br>它可以显示和netstat类似的内容。但ss的优势在于它能够显示更多更详细的有关TCP和连接状态的信息，而且比netstat更快速更高效。</p>
-</li>
-<li><p>```bash<br>docker run –name “phpTiral01” -p 3002:80 -d 62<br>apt-get install zip unzip</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">5. nginx 修改配置文件</span><br><span class="line"></span><br><span class="line">6. &#96;&#96;&#96;bash</span><br><span class="line">   apt-get install curl zip unzip php php-mbstring vim</span><br></pre></td></tr></table></figure></li>
-<li><p>/usr/local/bin/</p>
-</li>
-<li><pre><code class="yaml">version: &quot;3&quot;
-services:
-  nginx:
-    image: nginx:1.12-alpine
-    container_name: tp3-nginx
-    ports:
-      - &quot;80:80&quot;
-    networks:
-      - dockerinnernet
-    depends_on:
-      - &quot;php&quot;
-    volumes:
-      - ~/docker_data/nginx:/etc/nginx/conf.d
-      - ~/docker_data/wwwroot:/var/www/html:ro
-  php:
-    image: surenkid/php53:latest
-    container_name: tp3-php
-    ports:
-      - &quot;9000:9000&quot;
-    networks:
-      - dockerinnernet
-    depends_on:
-      - &quot;mysql&quot;
-      - &quot;redis&quot;
-    volumes:
-      - ~/docker_data/wwwroot:/var/www/html
-  mysql:
-    image: mysql:5.6.36
-    container_name: tp3-mysql
-    ports:
-      - &quot;3306:3306&quot;
-    networks: 
-      - dockerinnernet
-    volumes:
-      - mydata:/var/lib/mysql
-      - ~/docker_data/dbdump:/root
-    environment:
-      MYSQL_ROOT_PASSWORD: &quot;hi_ktsee_com&quot;
-  redis:
-    image: redis:3.0-alpine
-    container_name: tp3-redis
-    ports:
-      - &quot;6379:6379&quot;
-    networks: 
-      - dockerinnernet
-    volumes:
-      - ~/docker_data/redis:/data
-networks: 
-  dockerinnernet:
-volumes:
-  mydata:
-</code></pre>
-</li>
-<li></li>
-</ol>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-04-30T12:37:43.047Z" title="2021/4/30 下午8:37:43">2021-04-30</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-04-30T16:50:47.156Z" title="2021/5/1 上午12:50:47">2021-05-01</time></span><span class="level-item">2 minutes read (About 266 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/04/30/%E5%89%8D%E7%AB%AF%E5%90%91%E5%90%8E%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E5%B9%B6%E4%B8%94%E4%BC%A0%E9%80%81%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E5%BC%8F/"> </a></h1><div class="content"><h4 id="前端向后台服务器端发送请求并且传送数据的方式"><a href="#前端向后台服务器端发送请求并且传送数据的方式" class="headerlink" title="前端向后台服务器端发送请求并且传送数据的方式"></a>前端向后台服务器端发送请求并且传送数据的方式</h4><ol>
-<li><p>简易 herf form(action)</p>
-</li>
-<li><p>异步实现:<strong>Ajax</strong> (<a target="_blank" rel="noopener" href="https://codeplayer.vip/p/j7ss9">文档</a>)</p>
-<ol>
-<li><p>Jquery</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://libs.baidu.com/jquery/2.0.0/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">to load jquery</span><br></pre></td></tr></table></figure></li>
-<li><p>```javascript<br>$.ajax({</p>
-<pre><code>url:&quot;http://localhost:99&quot;
-</code></pre>
-<p>})<br>//建立了请求</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">   3. &#96;&#96;&#96;&#96;javascript</span><br><span class="line">      $.ajax(&#123;</span><br><span class="line">          method:&quot;POST&quot;,</span><br><span class="line">          data:&#123;a:10&#125;,</span><br><span class="line">          url:&quot;http:&#x2F;&#x2F;localhost:99&quot;,</span><br><span class="line">          success:function(data)&#123;console.log(data)&#125;</span><br><span class="line">      &#125;)</span><br><span class="line">      &#96;&#96;&#96;&#96;</span><br><span class="line"></span><br><span class="line">   4. &#96;&#96;&#96;&#96;javascript</span><br><span class="line">      $.ajax(&#123;</span><br><span class="line">          method:&quot;POST&quot;,</span><br><span class="line">          headers:&#123;&#39;Content-Type&#39;:&#39;application&#x2F;json&#39;&#125;,</span><br><span class="line">          data:JSON.stringify(&#123;a:10&#125;),</span><br><span class="line">          url:&quot;http:&#x2F;&#x2F;localhost:99&quot;,</span><br><span class="line">          success:function(data)&#123;console.log(data)&#125;</span><br><span class="line">      &#125;)</span><br><span class="line">      &#x2F;&#x2F;使用Json格式</span><br><span class="line">      &#96;&#96;&#96;&#96;</span><br><span class="line"></span><br><span class="line">3. 异步实现:**fetch**(included in broswer)</span><br><span class="line"></span><br><span class="line">   1. &#96;&#96;&#96;js</span><br><span class="line">      fetch(&quot;URL&quot;)</span><br></pre></td></tr></table></figure></li>
-<li><p>```javascript</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. 异步实现:**axios** (ui  and  backend all support) </span><br><span class="line"></span><br><span class="line">   1. &#96;&#96;&#96;javascript</span><br><span class="line">      &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;unpkg.com&#x2F;axios&#x2F;dist&#x2F;axios.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure></li>
-<li><pre><code class="javascript">axios(&#123;
-    url:&quot;http://localhost:99&quot;
-&#125;)
-</code></pre>
-</li>
-</ol>
-</li>
-</ol>
-<p>Tip:</p>
-<ol>
-<li><p>CDN – content delivery network</p>
-</li>
-<li><p>(in browser URL) :  </p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">data:text/html,&lt;h1&gt;hello&lt;/h1&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>```yaml<br>data:text/html,<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script><br>use jquery in brower console</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. 后端语言 </span><br><span class="line">         Java PHP Python Go Js</span><br><span class="line"></span><br><span class="line">5. 后端语言 PHP (入门理解)</span><br><span class="line"></span><br><span class="line">   1. local.tpclass&#x2F;public&#x2F;index&#x2F;hello2</span><br><span class="line">      (localhost)&#x2F;(public)目录、入口文件&#x2F;控制器&#x2F;操作&#x2F;para&#x2F;int</span><br><span class="line">      (php simplest call)</span><br><span class="line">   2. (php interface)</span><br><span class="line">      后台向前端提供数据</span><br><span class="line">   3. thinkPHP框架</span><br><span class="line"></span><br><span class="line">6. &#96;&#96;&#96;javascript</span><br><span class="line">   document.getElementById(&quot;theId&quot;).innerHTML &#x3D; &quot;change&quot;</span><br></pre></td></tr></table></figure></li>
-<li><p>Ningx伪静态<br>上面的一条伪静态（rewrite）是将访问wojiuwangla.com/wangla.html给301（重定向）到百度。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">rewrite</span> <span class="string">^/wanglang.html$</span> <span class="string">http://baidu.com</span></span><br></pre></td></tr></table></figure></li>
-<li><pre><code class="yaml">    location / &#123;
-        root   /var/tp;
-        index  index.html index.htm;
-    &#125;
-</code></pre>
-</li>
-<li><p>新建文本文档.txt</p>
-</li>
-</ol>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-04-30T11:33:42.051Z" title="2021/4/30 下午7:33:42">2021-04-30</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-05-01T11:44:56.961Z" title="2021/5/1 下午7:44:56">2021-05-01</time></span><span class="level-item">4 minutes read (About 634 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/04/30/ruoyi%E9%85%8D%E7%BD%AE%20and%20more/"> </a></h1><div class="content"><h4 id="ruoyi配置-and-more"><a href="#ruoyi配置-and-more" class="headerlink" title="ruoyi配置 and more"></a>ruoyi配置 and more</h4><ol>
-<li></li>
-<li><p>Druid介绍及入门</p>
-</li>
-<li><p>````bash</p>
-<blockquote>
-<p>unzip file</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. npm install --unsafe-perm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line">5. apt-get install nodejs</span><br><span class="line"></span><br><span class="line">6. npm run build:prod     --- 得到 dist 目录 （打包后的文件）</span><br><span class="line"></span><br><span class="line">7. mv node-v12.4.0-linux-x64&#x2F; &#x2F;usr&#x2F;local&#x2F;node</span><br><span class="line"></span><br><span class="line">8. 安装node</span><br><span class="line"></span><br><span class="line">   1. vim 改configure</span><br><span class="line"></span><br><span class="line">   2. .&#x2F;configure</span><br><span class="line"></span><br><span class="line">   3. make</span><br><span class="line"></span><br><span class="line">      1. **（二）通过源码编译**</span><br><span class="line"></span><br><span class="line">         　　这种方式你下载的文件是Source code，较为麻烦。</span><br><span class="line"></span><br><span class="line">            &#96;&#96;&#96;&#96;bash</span><br><span class="line">           # tar xvf node-v0.10.28.tar.gz</span><br><span class="line">           </span><br><span class="line">                    　　# cd node-v0.10.28</span><br><span class="line">           </span><br><span class="line">                    　　# 。&#x2F;configure</span><br><span class="line">           </span><br><span class="line">                    　　# make</span><br><span class="line">           </span><br><span class="line">                    　　# make install</span><br><span class="line">           </span><br><span class="line">                    　　# cp &#x2F;usr&#x2F;local&#x2F;bin&#x2F;node &#x2F;usr&#x2F;sbin&#x2F;</span><br><span class="line">           </span><br><span class="line">                    　　查看当前安装的Node的版本</span><br><span class="line">           </span><br><span class="line">                       　　# node -v</span><br><span class="line">           </span><br><span class="line">                    　　v0.10.2</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>dist 目录</p>
-</li>
-<li><p>/root/workspace/mvn/apache-maven-3.8.1</p>
-</li>
-<li><p>vim /etc/profile</p>
-<ol start="7">
-<li><p>/root/workspace/mvn/mvn</p>
-</li>
-<li><p>mvn package</p>
-</li>
-<li><pre><code>tar -xvf node-v14.16.1-linux-x64.tar.xz
-</code></pre>
-</li>
-<li><p>export PATH=/root/workspace/nodejs/node-v14.16.1-linux-x64/bin:$PATH</p>
-</li>
-<li><p>jar包 与 war包<br>war装到外置tomcat中</p>
-</li>
-<li><p>mvc clean</p>
-</li>
-<li><p>docker run –name ngx_ry -d -p 3001:80 <img_id></p>
-</li>
-<li><p>````yaml</p>
-<pre><code>server &#123;
-</code></pre>
-<p>##listen监听的端口<br>#语法：listen address:port [ default(deprecated in 0.8.21) | default_server | [ backlog=num | rcvbuf=size | sndbuf=size | accept_filter=filter | deferred | bind | ssl ] ]<br>#default_server: 如果没有设置这个参数，那么将会以在nginx.conf中找到的第一个server块作为默认server块</p>
-<pre><code>listen       8080;
-</code></pre>
-<p>#主机名称：其后可以跟多个主机名称，开始处理一个HTTP请求时，nginx会取出header头中的Host，与每个server中的server_name进行匹配，以此决定到底由那一个server来处理这个请求。有可能一个Host与多个server块中的server_name都匹配，这时会根据匹配优先级来选择实际处理的server块。server_name与Host的匹配优先级见文末。</p>
-<pre><code> server_name  localhost;
-
-    #charset koi8-r;
-
-    #access_log  logs/host.access.log  main;
-
-    #location / &#123;
-    #    root   html;
-    #    index  index.html index.htm;
-    #&#125;
-</code></pre>
-<p>##location 语法： location [=|<del>|</del>*|^~] /uri/ { … }</p>
-<h1 id="location的使用实例见文末。"><a href="#location的使用实例见文末。" class="headerlink" title="location的使用实例见文末。"></a>location的使用实例见文末。</h1><p>#注意：location时有顺序的，当一个请求有可能匹配多个location时，实际上这个请求会被第一个location处理。</p>
-<pre><code>location / &#123;
-proxy_pass http://192.168.1.60;
-    &#125;
-
-    #error_page  404              /404.html;
-
-    # redirect server error pages to the static page /50x.html
-    #
-    error_page   500 502 503 504  /50x.html;
-    location = /50x.html &#123;
-        root   html;
-    &#125;
-
-    # proxy the PHP scripts to Apache listening on 127.0.0.1:80
-    #
-    #location ~ \.php$ &#123;
-    #    proxy_pass   http://127.0.0.1;
-    #&#125;
-
-    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
- #
-    #location ~ \.php$ &#123;
-    #    root           html;
-    #    fastcgi_pass   127.0.0.1:9000;
-    #    fastcgi_index  index.php;
-    #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
-    #    include        fastcgi_params;
-    #&#125;
-
-    # deny access to .htaccess files, if Apache&#39;s document root
-    # concurs with nginx&#39;s one
-    #
-    #location ~ /\.ht &#123;
-    #    deny  all;
-    #&#125;
-</code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">15. &#x2F;etc&#x2F;nginx&#x2F;nginx.conf  &#x2F;etc&#x2F;nginx&#x2F;conf.d&#x2F; </span><br><span class="line"></span><br><span class="line">16. conf.d</span><br><span class="line"></span><br><span class="line">17. http:&#x2F;&#x2F;119.23.43.211:3306&#x2F;</span><br><span class="line"></span><br><span class="line">18. nohup java -jar ruoyi.jar &amp;</span><br><span class="line"></span><br><span class="line">19. docker cp </span><br><span class="line"></span><br><span class="line">20. &#96;&#96;&#96;&#96;yaml</span><br><span class="line">    proxy_set_header Host $http_host;</span><br><span class="line">    proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">    proxy_set_header REMOTE-HOST $remote_addr;</span><br><span class="line">    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">    proxy_pass http:&#x2F;&#x2F;119.23.43.211&#x2F;</span><br></pre></td></tr></table></figure></li>
-<li><p>war 包放在tomcagt中自动</p>
-<p>dist目录挂载在nginx配置中 静态访问</p>
-</li>
-<li></li>
-</ol>
-</li>
-</ol>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-04-28T16:52:04.673Z" title="2021/4/29 上午12:52:04">2021-04-29</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-04-28T17:14:27.599Z" title="2021/4/29 上午1:14:27">2021-04-29</time></span><span class="level-item">a few seconds read (About 107 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/04/29/httpsgitee.comy_projectRuoYi-Vue.git/"> </a></h1><div class="content"><p><a target="_blank" rel="noopener" href="https://gitee.com/y_project/RuoYi-Vue.git">https://gitee.com/y_project/RuoYi-Vue.git</a></p>
-<p>sudo docker run -p 3306:3306 –name mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.7</p>
-<p>docker run -itd –name redis-test -p 6379:6379 redis</p>
-<p>docker run -d –name myredis -p 6379:6379 redis –requirepass “mypassword”</p>
-<p>用了</p>
-<p>docker run -p 3306:3306 –name sql_ruoyi -e MYSQL_ROOT_PASSWORD=123456 -d &lt;&gt;</p>
-<p>docker run -d –name rds_ruoyi -p 6379:6379 redis –requirepass “123456”</p>
-<p>mysql</p>
-<p>CREATE DATABASE ‘ry-vue’ DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;</p>
-<p>CREATE DATABASE <code>ry-vue</code> DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;</p>
-<p><img src="C:\Users\26440\Desktop\QQ截图20210429010815.png" alt="QQ截图20210429010815"></p>
-<ol>
-<li>mysql&gt; source d:/jxgl.sql;</li>
-<li>docker cp 91e846b88c09:wordpress_back.sql   ./</li>
-</ol>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-04-28T13:36:07.452Z" title="2021/4/28 下午9:36:07">2021-04-28</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-04-28T16:10:51.019Z" title="2021/4/29 上午12:10:51">2021-04-29</time></span><span class="level-item">a few seconds read (About 68 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/04/28/%E5%B8%83%E6%9E%97%E9%98%BF%E7%AB%A5%E6%9C%A8/"> </a></h1><div class="content"><h4 id="布林阿童木"><a href="#布林阿童木" class="headerlink" title="布林阿童木"></a>布林阿童木</h4><ol>
-<li><p>记一记单词</p>
-<ol>
-<li><p>revised and expanded edition</p>
-</li>
-<li><p>the snowball earth hypothesis</p>
-</li>
-<li><p>course syllabus</p>
-</li>
-<li><p> scientific creation story</p>
-</li>
-<li><p>hydrogen and helium</p>
-</li>
-<li><p>just fuse hydrogen to make helium</p>
-</li>
-<li><p>Jupiter</p>
-</li>
-<li><p>hydrosphere lithosphere </p>
-</li>
-<li><p>climate sys \ plate tectonic sys \ geodynamo sys</p>
-</li>
-<li><p>limestone</p>
-</li>
-<li><p>solar radiation passes through the clear atmosphere</p>
-</li>
-<li><table>
-<thead>
-<tr>
-<th>10^9</th>
-<th>giga</th>
-<th>G</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>10^6</td>
-<td>mema</td>
-<td>M</td>
-</tr>
-<tr>
-<td>10^3</td>
-<td>kilo</td>
-<td>k</td>
-</tr>
-<tr>
-<td>1</td>
-<td>mili</td>
-<td>m</td>
-</tr>
-<tr>
-<td>micro</td>
-<td>nano</td>
-<td></td>
-</tr>
-</tbody></table>
-</li>
-<li><p>clockwork universe</p>
-</li>
-<li><p>chaos – 混沌</p>
-</li>
-</ol>
-</li>
-<li><p>还原论</p>
-</li>
-</ol>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-04-28T04:27:01.541Z" title="2021/4/28 下午12:27:01">2021-04-28</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-04-28T04:50:55.950Z" title="2021/4/28 下午12:50:55">2021-04-28</time></span><span class="level-item">2 minutes read (About 256 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/04/28/%E5%90%AC%E6%87%82%E6%8E%8C%E5%A3%B0%EF%BC%81/"> </a></h1><div class="content"><h4 id="听懂掌声！"><a href="#听懂掌声！" class="headerlink" title="听懂掌声！"></a>听懂掌声！</h4><h4 id="一些将要讲述的"><a href="#一些将要讲述的" class="headerlink" title="一些将要讲述的"></a>一些将要讲述的</h4><p>刚刚看到，说快来升华广场参与活动——给两年后的自己写一封信，当然了，如此下雨天我肯定——<strong>懒得动弹</strong>（这是我最近的口头禅）。我在想我会些什么呢，我也许会写自己最近的状态最近遇到的事。</p>
-<p>（md，我总是因为玩好久手机而忘记要讲述什么…乱乱乱乱乱），嗯，其实我想think “青春” less 一点。人生不止青春，有更多更多，更广阔。</p>
-<p>然后呢，就是最近的状态，可能真的是手头没啥（要紧）的事情，才生出吗么多幺蛾子。</p>
-<p>总之接下来加油啊！</p>
-<blockquote>
-<p>难道我的确会做很多女人做的事情吗？（兴趣点）</p>
-<p>比如喜欢想要去跳舞、想要买好看的东西</p>
-<p>（还是太闲了）</p>
-</blockquote>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-04-27T02:19:51.049Z" title="2021/4/27 上午10:19:51">2021-04-27</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-04-27T06:15:49.622Z" title="2021/4/27 下午2:15:49">2021-04-27</time></span><span class="level-item">10 minutes read (About 1574 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/04/27/%E5%A4%A7%E4%BD%AC%E6%9D%A5%E4%BA%86/"> </a></h1><div class="content"><h4 id="大佬来了-纯技术"><a href="#大佬来了-纯技术" class="headerlink" title="大佬来了(纯技术)"></a>大佬来了(纯技术)</h4><ol>
-<li><p><em>Yum</em>（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及CentOS中的Shell前端软件包管理器</p>
-</li>
-<li><p>Svn - subversion</p>
-</li>
-<li><p>You have just joined Tsinghua Online Judge<br>In order to complete your registration, please click on the following link:</p>
-</li>
-<li><p>Bootstrap 是一个用于快速开发 Web 应用程序和网站的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的。<br> <a target="_blank" rel="noopener" href="http://getbootstrap.com/">Twitter Bootstrap</a>.</p>
-</li>
-<li><p>dashboard</p>
-</li>
-<li><p>status - maintaining (仍在维护中)</p>
-</li>
-<li><p>forum – 论坛</p>
-</li>
-<li><p>利用Travis持续集成与Codecov测试覆盖率构建自动化测试环境，提升Github项目逼格。</p>
-<p>测试对于一个项目的重要性是不言而喻的，而小的开源项目往往难以配备专门的测试团队，频繁的push代码会使得本就缺乏人手的测试难上加难，因而构建自动化测试环境对于小型开源项目十分有必要！</p>
-<p><a target="_blank" rel="noopener" href="https://codecov.io/gh">Codecov</a>是一个测试结果分析工具，travis负责执行测试，Codecov负责分析测试结果，最简单的用法就是衡量测试代码覆盖度，当然更高端的用法还有待继续学习。依赖于travis，Codecov非常简单就能上手。</p>
-</li>
-<li><p>sanbox ： sandbox</p>
-</li>
-<li><p>volumes 量</p>
-</li>
-<li><p>backend：后端</p>
-</li>
-<li><p>整合LAMP</p>
-</li>
-<li><p>国内用户使用脚本一键安装:  （某种docker安装方法）<br><code>sudo curl -sSL https://get.daocloud.io/docker | sh</code></p>
-</li>
-<li><p>搭建OJ系统：本文介绍如何利用开源OJ系统源码快速搭建OJ系统</p>
-</li>
-<li><p>ip地址分为私网地址，公网地址，本地环回地址</p>
-<ol>
-<li><p>另外，nginx（web服务器）和mysql（数据库）进行对接，如果二者在同一台服务器，也是可以用127.0.0.1这个地址进行对接，也是自己访问自己。</p>
-</li>
-<li><p>私网地址是这些</p>
-<p>192.168开头的所有地址</p>
-</li>
-<li><p><strong>暴露公网ip，风险又多了一丢丢，但仍然不大。</strong><br>这时，就需要一台nat设备（网络地址转化设备），一般是台路由器或防火墙，帮我们把私网地址转成公网地址。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://mexlinker.github.io/img/avatar.png">https://mexlinker.github.io:443/img/avatar.png</a></p>
-</li>
-</ol>
-</li>
-<li><p>Remote Development<br> 如果你喜欢 linux 的开发环境和舒适的 shell，但却不舍得抛弃 windows/macos 图形界面给你带来的用户体验和一些软件的兼容(QQ, 微信), 那么 Remote Development 是你最好的选择。<br> 如果你还在纠结更换电脑需要重新配置本地环境，装 python，装 jre，装 node… Remote Development 将一举解决此问题，将开发环境和本地解耦。</p>
-</li>
-</ol>
-<ol>
-<li><pre><code class="yaml">(oj的docker-compose文件)
-version: &quot;3&quot;
-services:
-
-  oj-redis:
-    image: redis:4.0-alpine
-    container_name: oj-redis
-    restart: always
-    volumes:
-      - ./data/redis:/data
-  
-  oj-postgres:
-    image: postgres:10-alpine
-    container_name: oj-postgres
-    restart: always
-    volumes:
-      - ./data/postgres:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=onlinejudge
-      - POSTGRES_USER=onlinejudge
-      - POSTGRES_PASSWORD=onlinejudge
-
-  judge-server:
-    image: registry.cn-hangzhou.aliyuncs.com/onlinejudge/judge_server
-    container_name: judge-server
-    restart: always
-    read_only: true
-    cap_drop:
-      - SETPCAP
-      - MKNOD
-      - NET_BIND_SERVICE
-      - SYS_CHROOT
-      - SETFCAP
-      - FSETID
-    tmpfs:
-      - /tmp
-    volumes:
-      - ./data/backend/test_case:/test_case:ro
-      - ./data/judge_server/log:/log
-      - ./data/judge_server/run:/judger
-    environment:
-      - SERVICE_URL=http://judge-server:8080
-      - BACKEND_URL=http://oj-backend:8000/api/judge_server_heartbeat/
-      - TOKEN=CHANGE_THIS
-      # - judger_debug=1
-  
-  oj-backend:
-    image: registry.cn-hangzhou.aliyuncs.com/onlinejudge/oj_backend
-    container_name: oj-backend
-    restart: always
-    depends_on:
-      - oj-redis
-      - oj-postgres
-      - judge-server
-    volumes:
-      - ./data/backend:/data
-    environment:
-      - POSTGRES_DB=onlinejudge
-      - POSTGRES_USER=onlinejudge
-      - POSTGRES_PASSWORD=onlinejudge
-      - JUDGE_SERVER_TOKEN=CHANGE_THIS
-      # - FORCE_HTTPS=1
-      # - STATIC_CDN_HOST=cdn.oj.com
-    ports:
-      - &quot;0.0.0.0:80:8000&quot;
-      - &quot;0.0.0.0:443:1443&quot;
-</code></pre>
-</li>
-<li><p>```bash</p>
-<h1 id="用脚本安装-HUSTOJ"><a href="#用脚本安装-HUSTOJ" class="headerlink" title="用脚本安装 HUSTOJ"></a>用脚本安装 HUSTOJ</h1><pre><code>   sudo bash install-ubuntu14.04.sh
-   
-</code></pre>
-<p>#!/bin/bash<br>apt-get update<br>apt-get install -y subversion<br>/usr/sbin/useradd -m -u 1536 judge<br>cd /home/judge/<br>svn co <a target="_blank" rel="noopener" href="https://github.com/zhblue/hustoj/trunk/trunk/">https://github.com/zhblue/hustoj/trunk/trunk/</a> src</p>
-<p>echo ‘mysql-server-5.5 mysql-server/root_password password “1”‘ | sudo debconf-set-selections<br>echo ‘mysql-server-5.5 mysql-server/root_password_again password “”‘ | sudo debconf-set-selections<br>apt-get install -y make flex g++ clang libmysqlclient-dev libmysql++-dev php5-fpm php5-memcache memcached nginx mysql-server php5-mysql php5-gd fp-compiler openjdk-7-jdk<br>apt-get -y install language-pack-zh-hans</p>
-<p>USER=<code>cat /etc/mysql/debian.cnf |grep user|head -1|awk  &#39;&#123;print $3&#125;&#39;</code><br>PASSWORD=<code>cat /etc/mysql/debian.cnf |grep password|head -1|awk  &#39;&#123;print $3&#125;&#39;</code><br>CPU=<code>grep &quot;cpu cores&quot; /proc/cpuinfo |head -1|awk &#39;&#123;print $4&#125;&#39;</code><br>COMPENSATION=<code>grep &#39;mips&#39; /proc/cpuinfo|head -1|awk -F: &#39;&#123;printf(&quot;%.2f&quot;,$2/5000)&#125;&#39;</code><br>mkdir etc data log backup</p>
-<p>cp src/install/java0.policy  /home/judge/etc<br>cp src/install/judge.conf  /home/judge/etc<br>chmod +x src/install/ans2out</p>
-<p>if grep “OJ_SHM_RUN=0” etc/judge.conf ; then</p>
-<pre><code>mkdir run0 run1 run2 run3
-chown judge run0 run1 run2 run3
-</code></pre>
-<p>fi</p>
-<p>sed -i “s/OJ_USER_NAME=root/OJ_USER_NAME=$USER/g” etc/judge.conf<br>sed -i “s/OJ_PASSWORD=root/OJ_PASSWORD=$PASSWORD/g” etc/judge.conf<br>sed -i “s/OJ_RUNNING=1/OJ_RUNNING=$CPU/g” etc/judge.conf<br>sed -i “s/OJ_CPU_COMPENSATION=1.0/OJ_CPU_COMPENSATION=$COMPENSATION/g” etc/judge.conf</p>
-<p>sed -i “s/DB_USER[[:space:]]*=[[:space:]]<em>&quot;root&quot;/DB_USER=&quot;$USER&quot;/g” src/web/include/db_info.inc.php<br>sed -i “s/DB_PASS[[:space:]]</em>=[[:space:]]*&quot;root&quot;/DB_PASS=&quot;$PASSWORD&quot;/g” src/web/include/db_info.inc.php<br>chown -R www-data src/web/<br>chown www-data src/web/upload data<br>if grep “client_max_body_size” /etc/nginx/nginx.conf ; then </p>
-<pre><code>echo &quot;client_max_body_size already added&quot; ;
-</code></pre>
-<p>else</p>
-<pre><code>sed -i &quot;s:include /etc/nginx/mime.types;:client_max_body_size    80m;\n\tinclude /etc/nginx/mime.types;:g&quot; /etc/nginx/nginx.conf
-</code></pre>
-<p>fi</p>
-<p>mysql -h localhost -u$USER -p$PASSWORD &lt; src/install/db.sql<br>echo “insert into jol.privilege values(‘admin’,’administrator’,’true’,’N’);”|mysql -h localhost -u$USER -p$PASSWORD </p>
-<p>sed -i “s#root /usr/share/nginx/html;#root /home/judge/src/web;\n\n#g” /etc/nginx/sites-enabled/default<br>#sed -i “s#root /usr/share/nginx/html;#root /home/judge/src/web;\n\n\tlocation /recent-contest.json {\n\t\tproxy_pass <a target="_blank" rel="noopener" href="http://contests.acmicpc.info/contests.json;/n/t%7D#g&quot;">http://contests.acmicpc.info/contests.json;\n\t}#g&quot;</a> /etc/nginx/sites-enabled/default<br>sed -i “s:index index.html:index index.php:g” /etc/nginx/sites-enabled/default<br>sed -i “s:#location ~ \.php\$:location ~ \.php\$:g” /etc/nginx/sites-enabled/default<br>sed -i “s:#\tfastcgi_split_path_info:\tfastcgi_split_path_info:g” /etc/nginx/sites-enabled/default<br>sed -i “s:#\tfastcgi_pass unix:\tfastcgi_pass unix:g” /etc/nginx/sites-enabled/default<br>sed -i “s:#\tfastcgi_index:\tfastcgi_index:g” /etc/nginx/sites-enabled/default<br>sed -i “s:#\tinclude fastcgi_params;:\tinclude fastcgi_params;\n\t}:g” /etc/nginx/sites-enabled/default<br>/etc/init.d/nginx restart<br>sed -i “s/post_max_size = 8M/post_max_size = 80M/g” /etc/php5/fpm/php.ini<br>sed -i “s/upload_max_filesize = 2M/upload_max_filesize = 80M/g” /etc/php5/fpm/php.ini<br>sed -i ‘s/;request_terminate_timeout = 0/request_terminate_timeout = 128/g’ <code>find /etc/php5 -name www.conf</code><br>sed -i ‘s/pm.max_children = 5/pm.max_children = 200/g’ <code>find /etc/php5 -name www.conf</code></p>
-<p>/etc/init.d/php5-fpm restart<br>service php5-fpm restart<br>cd src/core<br>chmod +x ./make.sh<br>./make.sh<br>if grep “/usr/bin/judged” /etc/rc.local ; then</p>
-<pre><code>echo &quot;auto start judged added!&quot;
-</code></pre>
-<p>else</p>
-<pre><code>sed -i &quot;s/exit 0//g&quot; /etc/rc.local
-echo &quot;/usr/bin/judged&quot; &gt;&gt; /etc/rc.local
-echo &quot;exit 0&quot; &gt;&gt; /etc/rc.local
-</code></pre>
-<p>fi<br>if grep “bak.sh” /var/spool/cron/crontabs/root ; then</p>
-<pre><code>echo &quot;auto backup added!&quot;
-</code></pre>
-<p>else</p>
-<pre><code>crontab -l &gt; conf &amp;&amp; echo &quot;1 0 * * * /home/judge/src/install/bak.sh&quot; &gt;&gt; conf &amp;&amp; crontab conf &amp;&amp; rm -f conf
-</code></pre>
-<p>fi<br>/usr/bin/judged<br>systemctl enable hustoj<br>systemctl enable nginx<br>systemctl enable mysql<br>systemctl enable php7.3-fpm<br>systemctl enable judged</p>
-<p>cls<br>reset</p>
-<p>echo “Remember your database account for HUST Online Judge:”<br>echo “username:$USER”<br>echo “password:$PASSWORD”</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. &#96;&#96;&#96;sql</span><br><span class="line">   insert into privilege(user_id,rightstr)</span><br><span class="line">   </span><br><span class="line">   values(&#39;123456&#39;,&#39;administrator&#39;);*--创建管理员账号123456 密码administrator*</span><br></pre></td></tr></table></figure></li>
-</ol>
-<ol>
-<li></li>
-</ol>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-04-26T16:43:24.146Z" title="2021/4/27 上午12:43:24">2021-04-27</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-04-26T16:43:24.317Z" title="2021/4/27 上午12:43:24">2021-04-27</time></span><span class="level-item">4 minutes read (About 525 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/04/27/Docker%20build%20Wordpress%20%E8%BF%81%E7%A7%BB/"> </a></h1><div class="content"><h4 id="Docker-build-Wordpress-迁移"><a href="#Docker-build-Wordpress-迁移" class="headerlink" title="Docker build Wordpress 迁移"></a>Docker build Wordpress 迁移</h4><h4 id="带吴钩"><a href="#带吴钩" class="headerlink" title="带吴钩"></a>带吴钩</h4><blockquote>
-<p>从2021.2左右我便用PC上基于WSL2地docker，用CodeSheep地yml compose up了wordpress，简洁的界面，神奇地动态也买你让我十分感兴趣，很喜欢在上面编辑<em>日思</em></p>
-</blockquote>
-<blockquote>
-<p>到学校后，由于想要学习一点Web server （java web）,便手痒痒去aliyun申请了Ecs高校计划，两个月的，2核4G云主机</p>
-</blockquote>
-<blockquote>
-<p>其实很要有自己的服务器吧——跑了tinyhttpd、docker（tomca、nginx）(不得不说，由于默认端口问题，我整了很久docker的端口映射)</p>
-</blockquote>
-<blockquote>
-<p><strong>当然！我想要wordpress上云</strong></p>
-<h4 id="当然！我想要wordpress上云"><a href="#当然！我想要wordpress上云" class="headerlink" title="当然！我想要wordpress上云"></a><strong>当然！我想要wordpress上云</strong></h4></blockquote>
-<ol>
-<li>一开始的方案，弄懂了docker images与container之后，我想要把wordpress与mysql同时push上我的dockerHub账号，然后在ecs上push下来run就好了。</li>
-<li>我试了两次，结果都是init的，我开始怀疑是wp与sql没有连接好，然后配置链接 -&gt; 没用；我开始怀疑是sql是空白的，然后exec近sql查询users -&gt; sql的确空白。</li>
-<li> 我只baidu：“docker wp迁移”，答案有导出出具库方法 -&gt; 在本机导出到 /  -&gt; 导出到winFileSys -&gt; ftp到Ecs -&gt; 导入到sqlContiner -&gt; 导入到myqslApp中；当我开始公网Ip访问，惊喜地——可以看到内容，但是点击任意链接，竟然会跳到localhost，这个东西并不存在…</li>
-<li>我知道是 wordpress 的地址配置不对，修改wpContiner.wp_config.php -&gt; 还是没用</li>
-<li>怀疑database少导了一个，准备在Ecs.sql 中 drop，竟然deny root…</li>
-<li>只好接下来跟着教程，改sql中的值<br>(DB)wordpress -&gt; (table)wp_options -&gt; siteurl/home<br>改成自己的域名之后 -&gt; 好了！<br>妈妈呀！！！</li>
-</ol>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ol>
-<li>很重要的一点是有一个系统性的排错思路，时常做测验、分清楚错误有可能会发生在那一步</li>
-<li>多记记sql语句，用的时候学很慢很慢</li>
-</ol>
-<p>refer ： <a target="_blank" rel="noopener" href="https://blog.csdn.net/u012577474/article/details/106224625/">https://blog.csdn.net/u012577474/article/details/106224625/</a></p>
-</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/13/">Previous</a></div><div class="pagination-next"><a href="/page/15/">Next</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/13/">13</a></li><li><a class="pagination-link is-current" href="/page/14/">14</a></li><li><a class="pagination-link" href="/page/15/">15</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/22/">22</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">212</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">0</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-29T13:51:39.327Z">2021-08-29</time></p><p class="title"><a href="/2021/08/29/%E6%88%91%E7%9B%B8%E4%BF%A1%E6%80%9D%E8%80%83%E7%9A%84%E6%97%A0%E9%99%90%E6%BD%9C%E5%8A%9B/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-29T05:56:11.058Z">2021-08-29</time></p><p class="title"><a href="/2021/08/29/%E5%85%AB%E6%9C%88%E4%BA%8C%E5%8D%81%E4%B9%9D%E6%97%A5%EF%BC%8C%E7%9A%86%E5%A4%A7%E6%AC%A2%E5%96%9C/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-28T13:09:32.084Z">2021-08-28</time></p><p class="title"><a href="/2021/08/28/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E6%89%8B%E6%9C%BA/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-27T09:25:36.297Z">2021-08-27</time></p><p class="title"><a href="/2021/08/27/Untitled/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-26T09:11:11.200Z">2021-08-26</time></p><p class="title"><a href="/2021/08/26/%E7%83%A6%E5%BE%97%E5%BE%88/"> </a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">August 2021</span></span><span class="level-end"><span class="level-item tag">33</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">July 2021</span></span><span class="level-end"><span class="level-item tag">40</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/06/"><span class="level-start"><span class="level-item">June 2021</span></span><span class="level-end"><span class="level-item tag">30</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/05/"><span class="level-start"><span class="level-item">May 2021</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">April 2021</span></span><span class="level-end"><span class="level-item tag">38</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/03/"><span class="level-start"><span class="level-item">March 2021</span></span><span class="level-end"><span class="level-item tag">42</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget" data-type="adsense"><div class="card-content"><div class="menu"><h3 class="menu-label">Advertisement</h3><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="s" data-ad-slot="s" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2021 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/13/">Previous</a></div><div class="pagination-next"><a href="/page/15/">Next</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/13/">13</a></li><li><a class="pagination-link is-current" href="/page/14/">14</a></li><li><a class="pagination-link" href="/page/15/">15</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/22/">22</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">220</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">0</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-31T06:28:22.802Z">2021-08-31</time></p><p class="title"><a href="/2021/08/31/let&#039;s%20talk/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-30T22:36:36.158Z">2021-08-31</time></p><p class="title"><a href="/2021/08/31/also%20talks%20about%20old%20Marx/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-30T14:28:39.437Z">2021-08-30</time></p><p class="title"><a href="/2021/08/30/%E5%92%8C%E5%8D%97%E7%90%86%E5%B7%A5%E5%AD%A6%E9%95%BF%20%E5%90%83%E9%A5%AD/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-30T13:36:44.590Z">2021-08-30</time></p><p class="title"><a href="/2021/08/30/%E5%AE%9D%E5%95%8A%EF%BC%8C%E5%AD%A6%E7%82%B9%E5%8D%95%E8%AF%8D/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-30T12:46:02.402Z">2021-08-30</time></p><p class="title"><a href="/2021/08/30/%E6%96%B0%E5%B7%A5%E5%85%B7%EF%BC%9A%20you/"> </a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">August 2021</span></span><span class="level-end"><span class="level-item tag">41</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">July 2021</span></span><span class="level-end"><span class="level-item tag">40</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/06/"><span class="level-start"><span class="level-item">June 2021</span></span><span class="level-end"><span class="level-item tag">30</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/05/"><span class="level-start"><span class="level-item">May 2021</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">April 2021</span></span><span class="level-end"><span class="level-item tag">38</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/03/"><span class="level-start"><span class="level-item">March 2021</span></span><span class="level-end"><span class="level-item tag">42</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget" data-type="adsense"><div class="card-content"><div class="menu"><h3 class="menu-label">Advertisement</h3><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="s" data-ad-slot="s" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2021 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,

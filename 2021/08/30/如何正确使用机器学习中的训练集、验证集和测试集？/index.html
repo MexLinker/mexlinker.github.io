@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Hexo</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Dan"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Dan"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="如何正确使用机器学习中的训练集、验证集和测试集？ 王树义 训练集、验证集和测试集，林林总总的数据集合类型，到底该怎么选、怎么用？看过这篇教程后，你就能游刃有余地处理它们了。 问题审稿的时候，不止一次，我遇到作者错误使用数据集合跑模型准确率，并和他人成果比较的情况。 他们的研究创意有的很新颖，应用价值较高，工作可能也做了着实不少。 但因对比方法错误，得出来的结果，不具备说服力。几乎全部都需要返工。"><meta property="og:type" content="blog"><meta property="og:title" content="Hexo"><meta property="og:url" content="http://example.com/2021/08/30/%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E8%AE%AD%E7%BB%83%E9%9B%86%E3%80%81%E9%AA%8C%E8%AF%81%E9%9B%86%E5%92%8C%E6%B5%8B%E8%AF%95%E9%9B%86%EF%BC%9F/"><meta property="og:site_name" content="Hexo"><meta property="og:description" content="如何正确使用机器学习中的训练集、验证集和测试集？ 王树义 训练集、验证集和测试集，林林总总的数据集合类型，到底该怎么选、怎么用？看过这篇教程后，你就能游刃有余地处理它们了。 问题审稿的时候，不止一次，我遇到作者错误使用数据集合跑模型准确率，并和他人成果比较的情况。 他们的研究创意有的很新颖，应用价值较高，工作可能也做了着实不少。 但因对比方法错误，得出来的结果，不具备说服力。几乎全部都需要返工。"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://pica.zhimg.com/v2-9c326634115ea56ef90f8bcea6fd5c76_xs.jpg?source=172ae18b"><meta property="og:image" content="https://pic3.zhimg.com/80/v2-6dacb3d7473eafbdc8240cf4c276009e_720w.jpg"><meta property="og:image" content="https://pic4.zhimg.com/80/v2-5a2433d7762f87040c922797fcf8467f_720w.jpg"><meta property="og:image" content="https://pic3.zhimg.com/80/v2-241a217e191393385f85da6e8177a2ee_720w.jpg"><meta property="og:image" content="https://pic3.zhimg.com/80/v2-241a217e191393385f85da6e8177a2ee_720w.jpg"><meta property="article:published_time" content="2021-08-30T11:02:09.191Z"><meta property="article:modified_time" content="2021-08-30T11:02:10.764Z"><meta property="article:author" content="John Doe"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://pica.zhimg.com/v2-9c326634115ea56ef90f8bcea6fd5c76_xs.jpg?source=172ae18b"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/08/30/%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E8%AE%AD%E7%BB%83%E9%9B%86%E3%80%81%E9%AA%8C%E8%AF%81%E9%9B%86%E5%92%8C%E6%B5%8B%E8%AF%95%E9%9B%86%EF%BC%9F/"},"headline":"Hexo","image":["https://pic3.zhimg.com/80/v2-6dacb3d7473eafbdc8240cf4c276009e_720w.jpg","https://pic4.zhimg.com/80/v2-5a2433d7762f87040c922797fcf8467f_720w.jpg","https://pic3.zhimg.com/80/v2-241a217e191393385f85da6e8177a2ee_720w.jpg","https://pic3.zhimg.com/80/v2-241a217e191393385f85da6e8177a2ee_720w.jpg"],"datePublished":"2021-08-30T11:02:09.191Z","dateModified":"2021-08-30T11:02:10.764Z","author":{"@type":"Person","name":"John Doe"},"description":"如何正确使用机器学习中的训练集、验证集和测试集？ 王树义 训练集、验证集和测试集，林林总总的数据集合类型，到底该怎么选、怎么用？看过这篇教程后，你就能游刃有余地处理它们了。 问题审稿的时候，不止一次，我遇到作者错误使用数据集合跑模型准确率，并和他人成果比较的情况。 他们的研究创意有的很新颖，应用价值较高，工作可能也做了着实不少。 但因对比方法错误，得出来的结果，不具备说服力。几乎全部都需要返工。"}</script><link rel="canonical" href="http://example.com/2021/08/30/%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E8%AE%AD%E7%BB%83%E9%9B%86%E3%80%81%E9%AA%8C%E8%AF%81%E9%9B%86%E5%92%8C%E6%B5%8B%E8%AF%95%E9%9B%86%EF%BC%9F/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><script data-ad-client="s" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script><meta name="generator" content="Hexo 5.4.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-08-30T11:02:09.191Z" title="2021/8/30 下午7:02:09">2021-08-30</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-08-30T11:02:10.764Z" title="2021/8/30 下午7:02:10">2021-08-30</time></span><span class="level-item">33 minutes read (About 4981 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"> </h1><div class="content"><h4 id="如何正确使用机器学习中的训练集、验证集和测试集？"><a href="#如何正确使用机器学习中的训练集、验证集和测试集？" class="headerlink" title="如何正确使用机器学习中的训练集、验证集和测试集？"></a>如何正确使用机器学习中的训练集、验证集和测试集？</h4><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/wang-shu-yi-11"><img src="https://pica.zhimg.com/v2-9c326634115ea56ef90f8bcea6fd5c76_xs.jpg?source=172ae18b" alt="王树义"></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/wang-shu-yi-11">王树义</a><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/48510028"></a></p>
+<p>训练集、验证集和测试集，林林总总的数据集合类型，到底该怎么选、怎么用？看过这篇教程后，你就能游刃有余地处理它们了。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a><strong>问题</strong></h2><p>审稿的时候，不止一次，我遇到作者<strong>错误使用</strong>数据集合跑模型准确率，并和他人成果比较的情况。</p>
+<p>他们的研究创意有的很新颖，应用价值较高，工作可能也做了着实不少。</p>
+<p>但因对比方法错误，得出来的结果，不具备说服力。几乎全部都需要<strong>返工</strong>。</p>
+<p>这里，我帮你梳理一下，该怎么使用不同的数据集合：</p>
+<ul>
+<li>训练集（training set）</li>
+<li>验证集（validation set）</li>
+<li>测试集（test set）</li>
+</ul>
+<p>目的只有一个——避免你<strong>踩同样的坑</strong>。</p>
+<p>其实这个问题，咱们之前的教程文章，已有涉及。</p>
+<p>《<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/48182945">如何用 Python 和深度迁移学习做文本分类？</a>》一文中，我曾经给你布置了一个类似的问题。</p>
+<p>在文章的末尾，我们对比了当时近期研究中， Yelp 情感分类的最佳结果。</p>
+<p>下表来自于：Shen, D., Wang, G., Wang, W., Min, M. R., Su, Q., Zhang, Y., … &amp; Carin, L. (2018). Baseline needs more love: On simple word-embedding-based models and associated pooling mechanisms. arXiv preprint arXiv:1805.09843.</p>
+<p><img src="https://pic3.zhimg.com/80/v2-6dacb3d7473eafbdc8240cf4c276009e_720w.jpg" alt="img"></p>
+<p>注意这里最高的准确率（Accuracy）数值，是 95.81 。</p>
+<p>我们当时的模型，在验证集上，可以获得的准确率，是这个样子的：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-5a2433d7762f87040c922797fcf8467f_720w.jpg" alt="img"></p>
+<p>97.28%，着实不低啊！</p>
+<p>于是我问你：</p>
+<blockquote>
+<p>咱们这种对比，是否科学？</p>
+</blockquote>
+<p>你<strong>当时的</strong>答案是什么？</p>
+<p>这么久过去了，又看了那么多新的教程和论文，你的答案发生变化了吗？</p>
+<p>现在咱们公布一下答案吧。</p>
+<p><strong>不科学</strong>。</p>
+<p>为什么？</p>
+<p>因为<strong>对比方法</strong>有问题。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a><strong>方法</strong></h2><p>原文中有这样一句：</p>
+<blockquote>
+<p>这里数据集只提供了训练集和“测试集”，因此我们把这个“测试集”当做验证集来使用。</p>
+</blockquote>
+<p>作为演示，数据集咱们想怎么用，就可以怎么用。</p>
+<p>甚至你把测试集拿来做训练，然后在训练集上跑测试，都没有人管。</p>
+<p>但是写学术论文，声称你的模型优于已有研究，却绝不能这么草率。</p>
+<p>注意，比较模型效能数值结果时，你只能拿不同的模型，在<strong>同样的测试集</strong>上面比。</p>
+<p>测试集不同，当然不可以。</p>
+<p>但模型A用测试集，模型B用验证集（与A的测试集数据完全一致）比，可以吗？</p>
+<p>很多人就会混淆了，觉得没问题啊。既然数据都一样，管它叫做什么名称呢？</p>
+<p>可是请你注意，哪怕A模型用的测试集，就是B模型用的验证集，你也<strong>不能</strong>把这两个集合跑出来的结果放在一起比较。</p>
+<p>因为这是<strong>作弊</strong>。</p>
+<p>你可能觉得我这样说，颇有些吹毛求疵的意味。</p>
+<p>咱们下面就来重新梳理一下，不同数据集合的作用。</p>
+<p>希望你因此能看清楚，这种似乎过于严苛的要求，其实是很有道理的。</p>
+<p>咱们从测试集开始谈，继而是验证集，最后是训练集。</p>
+<p>这样“倒过来说”的好处，是会让你理解起来，更加透彻。</p>
+<p>先说<strong>测试集</strong>吧。</p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a><strong>测试</strong></h2><p>只有在<strong>同样的测试集</strong>上，两个（或以上）模型的对比才有效。</p>
+<p>这就如同参加高考，两个人考同样一张卷子，分数才能对比。</p>
+<p>甲拿A地区的卷子，考了600分，乙拿B地区的卷子，考了580分。你能不能说，甲比乙成绩高？</p>
+<p>不行吧。</p>
+<p>为了让大家更易于比较自己的模型效果，许多不同领域的数据集，都已开放了。而且开放的时候，都会给你指明，哪些数据用于训练，哪些用于测试。</p>
+<p>以 Yelp 数据为例。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-241a217e191393385f85da6e8177a2ee_720w.jpg" alt="img"></p>
+<p>在 AWS 上存储的 fast.ai 公开数据集中，训练集和测试集都已为你准备好。</p>
+<p>你不需要自己进行划分。</p>
+<p>大家达成共识，做研究、写论文，都用这个测试集来比拼，就可以。</p>
+<p>所以，如果你的研究，是靠着比别人的模型效果来说事儿，那就一定先要弄明白<strong>对方的测试集</strong>是什么。</p>
+<p>但是，这个听起来很容易达成的目标，实践中却很容易遇到困难。</p>
+<p>因为有的人写论文，喜欢把数据和代码藏着掖着，生怕别人用了去。</p>
+<p>他们一般只提一下，是在某个公开数据集上切了一部分出来，作为测试集。</p>
+<p>测试数据集不发布，切分方法（包括工具）和随机种子选取办法也不公开。</p>
+<p>这是非常不靠谱的行为，纯属自娱自乐。</p>
+<p>作为严肃的审稿人，根本就<strong>不应该允许</strong>这样的研究发表。</p>
+<p>因为机器学习研究的数据集不开放，便基本上没有<strong>可重复性</strong>（Reproducibility）。</p>
+<p>如果你没有办法精确重复他的模型训练和测试过程，那么他想汇报多高的准确率，就纯凭个人爱好了。</p>
+<p>当然，我们不是活在理想世界的。</p>
+<p>你在某一个领域，用机器学习做应用研究的时候，面对这种无法重复已发表论文的情境，该怎么办？</p>
+<p>直接用他声称的结果与你的实际运行结果比较，你可能是在追逐海市蜃楼。累到气喘吁吁，甚至怀疑自我的程度，也徒劳无功。</p>
+<p>忽视它？</p>
+<p>也不行。</p>
+<p>审稿人那关你过不去。</p>
+<p>人家会说，某某研究跟你用的是一样的数据，准确率已经达到98%，你的才96%，有什么发表的意义呢？</p>
+<p>看，左右为难不是？</p>
+<p>其实解决办法很简单。</p>
+<p>不要考虑对方声称达到了多高准确率。把他提供给你的数据全集，自行切分。之后<strong>复现对方的模型</strong>，重新跑。</p>
+<p>模型架构，一般都是要求汇报的，所以这几乎不是问题。</p>
+<p>至于这种复现，越是复杂的模型，我越推荐你用 PyTorch 。</p>
+<p>之后把你的模型，和复现的对方模型在同样的测试集上做对比，就可以了。</p>
+<p>当然，论文里要写上一句：</p>
+<blockquote>
+<p>由于某篇文章未提供代码与具体数据切分说明，带来可重复性问题，我们不得不独立复现了其模型，并在测试集完全一致的情况下，进行了比对。</p>
+</blockquote>
+<p>这里多说一句，一定要保证你自己的研究，是<strong>可重复</strong>的。</p>
+<p>不要怕公布你的代码和数据。它们不是你的独门暗器，而是<strong>支撑你研究的凭据</strong>。</p>
+<p>回看我们前面提到的 Yelp 公开数据的例子。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-241a217e191393385f85da6e8177a2ee_720w.jpg" alt="img"></p>
+<p>这时候你会发现一个奇怪的问题——为什么它只有训练集和测试集？</p>
+<p>我们一直反复提到的<strong>验证集</strong>哪里去了？</p>
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a><strong>验证</strong></h2><p>验证集，就如同高考的模拟考试。</p>
+<p>不同于高考，模拟考只是你调整自己状态的指示器而已。</p>
+<p>状态不够满意，你可以继续调整。</p>
+<p>当然，参加过高考的同学都有经验——这种调整的结果（从模拟考到高考），有可能更好，也有可能更糟糕。</p>
+<p>回到机器学习上，那就是测试集上检验的，是你<strong>最终模型</strong>的性能。</p>
+<p>什么叫“最终模型”？</p>
+<p>就是你参加高考时候的状态。包括你当时的知识储备、情绪心态，以及当天的外部环境（温度、湿度、东西是否带齐）等。</p>
+<p>最终模型，只有<strong>一个</strong>。</p>
+<p>就如同每年的高考，你<strong>只能参加一回</strong>。</p>
+<p>考成什么样儿，就是什么样。</p>
+<p>而验证集上跑的，实际上却是一个模型<strong>集合</strong>，集合的大小，你可能数都数不过来。</p>
+<p>因为这里存在着超参数（hyper-parameter）设置的问题。不同超参数组合，就对应着不同的潜在模型。</p>
+<p>验证集的存在，是为了从这<strong>一堆可能的模型</strong>中，帮你表现最好的那个。</p>
+<p>注意这里的表现，是指在<strong>验证集</strong>上的表现。</p>
+<p>好比说，有个超参数叫做训练轮数（epochs）。</p>
+<p>在同样的训练集上，训练3轮和训练10轮，结果可能是不一样的模型。它们的参数并不相同。</p>
+<p>那么到底是训练3轮好，还是10轮好？</p>
+<p>或者二者都不好，应该训练6轮？</p>
+<p>这种决策，就需要在训练后，在验证集上“是骡子是马牵出来溜溜”。</p>
+<p>如果发现训练3轮效果更好，那么就应该丢弃掉训练6轮、10轮的潜在模型，只用训练3轮的结果。</p>
+<p>这对应着一种机器学习正则化（Regularization）方式——提早停止训练（early stopping）。</p>
+<p>其他的超参数选取，你也可以举一反三。总之就是按照验证集的效果，来选超参数，从而决定最终模型。</p>
+<p>下一步，自然就是把它交给测试集，去检验。这个我们前面已经详细讲解过了。</p>
+<p>至于这个最终选择模型，在新数据集（测试集）上表现如何，没人能打包票。</p>
+<p>所以，回到咱们之前的问题。在《<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/48182945">如何用 Python 和深度迁移学习做文本分类？</a>》一文中，我故意用<strong>验证集</strong>上筛选出的最好模型，在<strong>验证集</strong>上跑出来分数，当成是<strong>测试</strong>成绩，这显然是不妥当的。</p>
+<p>你不能把同样的题做他个三五遍，然后从中找最高分去跟别人比。</p>
+<p>即便你的模拟考，用的是别人的高考真题。两张卷子完全一样，也<strong>没有</strong>说服力。</p>
+<p>所以你看，验证集的目的，不是比拼最终模型效果的。</p>
+<p>因此，怎么设定验证集，划分多少数据做验证，其实是每个研究者需要独立作出的决策，不应该强行设定为一致。</p>
+<p>这就如同我们不会在高考前去检查每个考生，是否做过一样多的模拟试卷，且试卷内容也要一致。</p>
+<p>极端点儿说，即便一个考生没参加过模拟考，可高考成绩突出，你也不能不算他的成绩，对吧？</p>
+<p>不过，讲到这里，我们就得要把训练集拿进来，一起说说了。</p>
+<h2 id="训练"><a href="#训练" class="headerlink" title="训练"></a><strong>训练</strong></h2><p>如果测试集是高考试卷，验证集是模拟考试卷，那么训练集呢？</p>
+<p>大概包括很多东西，例如作业题、练习题。</p>
+<p>另外，我们上高三那时候（噫吁嚱，已经上个世纪的事儿了），每周有“统练”，每月有“月考”。也都可以划定在训练集的范畴。</p>
+<p>减负这么多年以后，现在的高中生应该没有那么辛苦了吧？真羡慕他们。</p>
+<p>这样一对比，你大概能了解这几个集合之间本应有的关系。</p>
+<p>学生平时练题，最希望的，就是考试能碰到<strong>原题</strong>，这样就可以保证不必动脑，却做出正确答案。</p>
+<p>所以，出模拟考卷时，老师尽量要保证不要出现学生平时练过的题目，否则无法正确估量学生目前的复习备考状态，噪声过高容易误事儿。</p>
+<p>验证集和训练集，应该是<strong>不交叠</strong>的。这样选择模型的时候，才可以避免被数据交叠的因素干扰。</p>
+<p>每个学校的模拟考，却都恨不得能押中高考的题。这样可以保证本校学生在高考中，可以“见多识广”，取得更高分数。</p>
+<p>高考出卷子的老师，就必须尽力保证题目是全新的，以筛选出有能力的学生，而不是为高校选拔一批“见过题目，并且记住了标准答案”的学生。</p>
+<p>因此，测试集应该既不同于训练集，又不同于验证集。</p>
+<p>换句话说，三个数据集合，最好都没有重叠。</p>
+<p>学生应该学会举一反三，学会的是知识和规律。</p>
+<p>用知识和规律，去处理新的问题。</p>
+<p>我们对机器模型的期许，其实也一样。</p>
+<p>在学术论文中，你见到的大部分用于机器学习模型对比的公开数据集（例如 fast.ai 公开数据集中的 Yelp, IMDB, ImageNet 等），都符合这一要求。</p>
+<p>然而，例外肯定是有的。</p>
+<p>例如我在 INFO 5731 课程里面给学生布置的某期末项目备选项，来源于某学术类数据科学竞赛，目标是社交媒体医学名词归一化。</p>
+<p>其中就有数据，既出现在了训练集，又出现在了验证集，甚至测试集里也会有。</p>
+<p>面对这种问题，你该怎么办？</p>
+<p>你怎么判断自己的模型，究竟是强行记住了答案，还是掌握了文本中的规律？</p>
+<p>这个问题，作为思考题留给你。</p>
+<p>我希望在知识星球中和热爱学习的你，做进一步讨论。</p>
+<p>另外的一个问题，是训练集要不要和别人的<strong>完全一致</strong>？</p>
+<p>一般来说，如果你要强调自己的模型优于其他人，那么就要保证是在<strong>同样的</strong>训练集上训练出来。</p>
+<p>回顾深度学习的三大要素：</p>
+<ul>
+<li>数据（Data）</li>
+<li>架构（Architecture）</li>
+<li>损失（Loss）</li>
+</ul>
+<p>如果你的训练数据，比别人多得多，那么模型自然见多识广。</p>
+<p>对于深度学习而言，如果训练数据丰富，就可以显著避免过拟合（Overfitting）的发生。</p>
+<p>GPT-2 模型，就是因为具备了海量 Reddit 数据做训练，才能傲视其他语言模型（Language Model），甚至以安全为理由，拒绝开放模型。</p>
+<p>但是这时候，你跟别人横向比较，似乎就不大公平了。</p>
+<p>你的架构设计，未必更好。假使对方用同样多的数据训练，结果可能不必你差，甚至会更优。</p>
+<p>这就如同一个复读了5年的学生甲，充分利用每一分每一秒，做了比应届生乙多5倍的卷子。结果在高考的时候，甲比乙多考了1分（同一张卷子）。</p>
+<p>你能说甲比乙更有学习能力，学习效果更好吗？</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a><strong>小结</strong></h2><p>这篇教程里，我为你梳理了机器学习中常见的三种不同数据集类别，即：</p>
+<ul>
+<li>训练集</li>
+<li>验证集</li>
+<li>测试集</li>
+</ul>
+<p>咱们一一分析了其作用，并且用“考试”这个大多数人都参加过，且容易理解的例子做了诠释。</p>
+<p>希望读过本文之后，你的概念架构更为清晰，不再会误用它们，避免给自己的研究挖坑。</p>
+<p>祝深度学习愉快，论文发表顺利哦！</p>
+<h2 id="作业"><a href="#作业" class="headerlink" title="作业"></a><strong>作业</strong></h2><p>这里给你留一道思考题：</p>
+<p>有的时候，你看到有人把训练集切分固定的一部分，作为验证集。但是另一些时候，你会看到有人采用“交叉验证”的方式，即每一轮训练，都动态轮转着，把一部分的数据，作为验证集。对吧？</p>
+<p>那么问题来了，什么样的情况下，你应该采用第一种方式，即固定分配验证集？什么样的情况下，你应该采用“交叉验证”方式呢？后者的优势和缺点，又各是什么呢？</p>
+<p>欢迎你留言回复，写下自己的判断标准与原因阐述。咱们一起交流讨论。</p>
+<h2 id="征稿"><a href="#征稿" class="headerlink" title="征稿"></a><strong>征稿</strong></h2><p>One more thing ……</p>
+<p>这里还有个<strong>征稿启事</strong>。</p>
+<p>国际学术期刊 Information Discovery and Delivery 要做一期关于 “Information Discovery with Machine Intelligence for Language” 的特刊（Special Issue）。</p>
+<p>本人是客座编辑（guest editor）之一。另外两位分别是：</p>
+<ul>
+<li>我在北得克萨斯大学（University of North Texas）的同事 <a href="https://link.zhihu.com/?target=https://linguistics.unt.edu/alexis-palmer">Dr. Alexis Palmer 教授</a></li>
+<li>南京理工大学<a href="https://link.zhihu.com/?target=https://bkso.baidu.com/item/%E7%AB%A0%E6%88%90%E5%BF%97">章成志教授</a></li>
+</ul>
+<p>征稿的主题包括但不限于：</p>
+<ul>
+<li>Language Modeling for Information Retrieval</li>
+<li>Transfer Learning for Text Classification</li>
+<li>Word and Character Representations for Cross-Lingual Analysis</li>
+<li>Information Extraction and Knowledge Graph Building</li>
+<li>Discourse Analysis at Sentence Level and Beyond</li>
+<li>Synthetic Text Data for Machine Learning Purposes</li>
+<li>User Modeling and Information Recommendation based on Text Analysis</li>
+<li>Semantic Analysis with Machine Learning</li>
+<li>Other applications of CL/NLP for Information Discovery</li>
+<li>Other related topics</li>
+</ul>
+<p>具体的征稿启事（Call for Paper），请查看 Emerald 期刊官网的<a href="https://link.zhihu.com/?target=http://www.emeraldgrouppublishing.com/products/journals/call_for_papers.htm?id=8662">这个链接</a>（<a href="https://link.zhihu.com/?target=http://dwz.win/c2Q">http://dwz.win/c2Q</a>）。</p>
+<p>作为本专栏的老读者，欢迎你，及你所在的团队踊跃投稿哦。</p>
+<p>如果你不巧并不从事上述研究方向（机器学习、自然语言处理和计算语言学等），也希望你能帮个忙，转发这个消息给你身边的研究者，让他们有机会成为我们特刊的作者。</p>
+<p>谢谢！</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p><a href="http://example.com/2021/08/30/如何正确使用机器学习中的训练集、验证集和测试集？/">http://example.com/2021/08/30/如何正确使用机器学习中的训练集、验证集和测试集？/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>John Doe</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2021-08-30</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2021-08-30</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>Afdian.net</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/" alt="Alipay"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/08/30/%E6%96%B0%E5%B7%A5%E5%85%B7%EF%BC%9A%20you/"><i class="level-item fas fa-chevron-left"></i><span class="level-item"> </span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/08/30/where%20is%20marks/"><span class="level-item"> </span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">220</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">0</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-31T06:28:22.802Z">2021-08-31</time></p><p class="title"><a href="/2021/08/31/let&#039;s%20talk/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-30T22:36:36.158Z">2021-08-31</time></p><p class="title"><a href="/2021/08/31/also%20talks%20about%20old%20Marx/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-30T14:28:39.437Z">2021-08-30</time></p><p class="title"><a href="/2021/08/30/%E5%92%8C%E5%8D%97%E7%90%86%E5%B7%A5%E5%AD%A6%E9%95%BF%20%E5%90%83%E9%A5%AD/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-30T13:36:44.590Z">2021-08-30</time></p><p class="title"><a href="/2021/08/30/%E5%AE%9D%E5%95%8A%EF%BC%8C%E5%AD%A6%E7%82%B9%E5%8D%95%E8%AF%8D/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-08-30T12:46:02.402Z">2021-08-30</time></p><p class="title"><a href="/2021/08/30/%E6%96%B0%E5%B7%A5%E5%85%B7%EF%BC%9A%20you/"> </a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/08/"><span class="level-start"><span class="level-item">August 2021</span></span><span class="level-end"><span class="level-item tag">41</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/07/"><span class="level-start"><span class="level-item">July 2021</span></span><span class="level-end"><span class="level-item tag">40</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/06/"><span class="level-start"><span class="level-item">June 2021</span></span><span class="level-end"><span class="level-item tag">30</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/05/"><span class="level-start"><span class="level-item">May 2021</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">April 2021</span></span><span class="level-end"><span class="level-item tag">38</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/03/"><span class="level-start"><span class="level-item">March 2021</span></span><span class="level-end"><span class="level-item tag">42</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget" data-type="adsense"><div class="card-content"><div class="menu"><h3 class="menu-label">Advertisement</h3><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="s" data-ad-slot="s" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Hexo" height="28"></a><p class="is-size-7"><span>&copy; 2021 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
